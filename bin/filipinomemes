@@ -13,7 +13,7 @@ else
     next unless file
     compiler = Filipinomemes::Compiler.new
     code = File.read file, encoding: 'utf-8'
-    ruby_code = compiler.sa_ruby code
+    ruby_code = compiler.zephyrum code
     raise 'The lowest version of Ruby needed is 2.4' if
       Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.3')
     eval ruby_code
