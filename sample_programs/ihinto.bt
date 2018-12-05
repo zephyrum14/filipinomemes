@@ -1,8 +1,8 @@
 nakamit = mali
 
-habang nakamit == mali
+ako_magisip nakamit == mali
   mag_print 'hindi pa nakakamit!'
-  hinto
-wakas
+  auko_na
+finish_na
 
 mag_print 'nakamit na!'

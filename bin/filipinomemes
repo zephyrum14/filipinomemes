@@ -11,11 +11,11 @@ filipinomemes file.bt
 else
   ARGV.each do |file|
     next unless file
-    tagatala = Filipinomemes::Compiler.new
-    kodigo = File.read file, encoding: 'utf-8'
-    ruby_kodigo = compiler.sa_ruby kodigo
+    compiler = Filipinomemes::Compiler.new
+    code = File.read file, encoding: 'utf-8'
+    ruby_code = compiler.sa_ruby code
     raise 'The lowest version of Ruby needed is 2.4' if
       Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.3')
-    eval ruby_kodigo
+    eval ruby_code
   end
 end

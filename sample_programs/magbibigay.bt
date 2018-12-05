@@ -4,19 +4,19 @@ ang gumawaNgID
   magbigay_daan
   
   mag_print "------------------------------------------"
-wakas
+finish_na
 
 ang ID(impormasyon = {})
-  gumawaNgID na_ganito
-    mag_print <<-KATAPUSAN
+  gumawaNgID adbans
+    mag_print <<-FINISH_NA
   Pangalan: #{impormasyon[:pangalan]}
   Edad:     #{impormasyon[:edad]}
   Tirahan:  #{impormasyon[:tirahan]}
   Baitang:  #{impormasyon[:baitang]}
   Seksiyon: #{impormasyon[:seksiyon]}
-    KATAPUSAN
-  wakas
-wakas
+    FINISH_NA
+  finish_na
+finish_na
 
 ID({
   pangalan: "Maliksi Batubalani",

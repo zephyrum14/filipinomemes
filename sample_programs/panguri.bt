@@ -3,11 +3,11 @@ bilang Pangalan
 
   ang initialize(pangalan)
     @pangalan = pangalan
-  wakas
+  finish_na
 
   ang ipakitaAngPangalan
-    mag_print sariling.pangalan
-  wakas
-wakas
+    mag_print mayselp.pangalan
+  finish_na
+finish_na
 
 Pangalan.gumawa('Joel').ipakitaAngPangalan

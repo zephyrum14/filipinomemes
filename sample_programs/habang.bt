@@ -1,7 +1,7 @@
-may_buhay = totoo
+may_buhay = istroo
 
-habang may_buhay
+ako_magisip may_buhay
   mag_print 'may pag-asa!'
 
-  hinto
-wakas
+  auko_na
+finish_na

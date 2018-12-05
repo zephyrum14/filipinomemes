@@ -5,33 +5,32 @@ grupo TimeBomb
   bilang Bomba
     ang tik
       mag_print 'tik'
-    wakas
+    finish_na
 
     ang tok
       mag_print 'tok'
-    wakas
+    finish_na
 
     ang sabog
       mag_print 'kaboom!'
-    wakas
-  wakas
-wakas
+    finish_na
+  finish_na
+finish_na
 
 pasabog = TimeBomb::Bomba.gumawa
 
 numero = 1
-habang numero <= TimeBomb::BILANG ganito
+ako_magisip numero <= TimeBomb::BILANG adbans
 	mag_print "#{numero}"
 
-  kapag (numero == TimeBomb::BILANG)
+  ip (numero == TimeBomb::BILANG)
     pasabog.sabog
-  ngunit_kapag_ang (numero % 2) != 0
+  agik_ginagawa_mue (numero % 2) != 0
     pasabog.tik
-  ngunit_kapag_ang (numero % 2) == 0
+  agik_ginagawa_mue (numero % 2) == 0
     pasabog.tok
-  wakas
+  finish_na
 
   matulog 1
 	numero += 1
-wakas
-
+finish_na

@@ -20,11 +20,11 @@ Ang kadahilanang ginamit ang pangalang 'bato' ay dahil ang Ruby ay isang uri ng 
 
 Gumawa ng isang file na `kamusta_mundo.bt` na may mga sumusunod na nilalaman
 
-    kapag 1 > 0
+    ip 1 > 0
       mag_print "Kumusta mundo!"
-    kung_hindi
+    ginagawa_mue
       mag_print "Mayroong sira"
-    wakas
+    finish_na
 
 at pa-andarin ang program sa pamamagitan ng
 
@@ -35,11 +35,11 @@ at pa-andarin ang program sa pamamagitan ng
 ### Pagsusulat
 
     "Ito ay mga serye ng mga sulat sa wikang Filipino"
-    <<-KATAPUSAN
+    <<-FINISH_NA
       mga salita
       na nahahati
       sa ilang mga hilera
-    KATAPUSAN
+    FINISH_NA
 
 ### Dinikit na mga pamamaraan
     'magandang araw'.baliktad         # => 'wara gnadnagam'
@@ -47,152 +47,129 @@ at pa-andarin ang program sa pamamagitan ng
 
 ### Ekspresyong Boolean
 
-    tama
+    truts
     mali
-    hindi tama
+    hindi truts
 
 ### Kondisyon
 
 Paggamit ng kondisyon.
 
-    kapag halaga > 100 dapat
+    agik halaga > 100 dapat
       "ayos lang"
-    kung_kapag halaga > 0 dapat
+    agik_ginagawa_mue halaga > 0 dapat
       "ok lang"
-    kung_hindi
+    ginagawa_mue
       "wala lang"
-    wakas
+    finish_na
 
-    kung_sakaling halaga
+    hakdog halaga
     pagka 5 dapat "lima"
     pagka 4 dapat "apat"
-    kung_hindi "wala"
-    wakas
+    ginagawa_mue "wala"
+    finish_na
 
 ### Pamamaraan sa pagkakamali
 
     bilang_ng_pagkakamali = 0
-    simula
-      # mag komento kapag hindi sigurado
+    glhf
+      # mag komento ip hindi sigurado
       1 / 0
     iligtas => pagkakamali
       bilang_ng_pagkakamali += 1
-      subukang_muli kapag bilang_ng_pagkakamali < 3
+      neba_gibap ip bilang_ng_pagkakamali < 3
       iangat "malubhang pagkakamali"
     siguraduhing
       mag_print "Tapos na"
-    wakas
+    finish_na
 
 ### Panuntunan
 
     ang iprintAngPangalan(pangalan = wala)
-      kapag pangalan != wala
+      ip pangalan != wala
         mag_print "Magandang araw sa iyo #{pangalan}!"
-      kung_hindi
+      ginagawa_mue
         mag_print "Magandang araw!"
-      wakas
-    wakas
+      finish_na
+    finish_na
 
     iprintAngPangalan "Maria" # => "Magandang araw sa iyo Maria!"
     iprintAngPangalan         # => "Magandang araw!"
 
 ## Paggamit ng mga ekspresyon ng mga salita sa program
 
-### wakas
+### finish_na
 
 Maari kang gumamit sa alin sa mga sumusunod sa pagtatapos ng program
 
-    wakas
-    dulo
-    katapusan
+    finish_na
+    gg
+    finish_na
 
 Halimbawa
 
     bilang_ng_saging = 2
-    kapag bilang_ng_saging > 1
+    ip bilang_ng_saging > 1
       mag_print "Mayroon akong #{bilang_ng_saging} saging! 🍌"
-    kung_hindi
+    ginagawa_mue
       mag_print "Wala na akong saging! 😐"
-    wakas
+    finish_na
 
-###  kung_iba
+###  ginagawa_mue
 
-Kapag ang ekspresyon ay hindi nasunod maaring gumamit sa alin sa mga sumusunod
+Kung ang ekspresyon ay hindi nasunod maaring gumamit sa alin sa mga sumusunod
 
-    iba
-    kung_iba
-    kung_hindi
-    kung_hindi_naman
-    kapag_hindi
-    kapag_hindi_naman
-    kung_hindi_pa
-    kapag_hindi_pa
-    at_kung_hindi
-    at_kapag_hindi
-    at_kung_hindi_naman
-    at_kapag_hindi_naman
-    at_kapag_hindi_pa
-    at_kung_hindi_pa
-    maliban_dito
-    maliban_sa_mga_ito
+    ginagawa_mue
+    els
 
 Halimbawa
 
     pangalan_mo = "Maliksi"
-    kapag_ang pangalan_mo == "Maliksi"
+    agik pangalan_mo == "Maliksi"
       mag_print "Ikaw ay si #{pangalan_mo}!"
-    kung_hindi_naman
+    ginagawa_mue
       mag_print "Magandang araw sa iyo #{pangalan_mo}!"
-    wakas
+    finish_na
 
-### sakali
+### hakdog
 
-Kapag mayroon kang ekspresyon na madaming resulta gawa ng mga iba't ibang kondisyon, maari kang gumamit ng mga sumusunod
+Kung mayroon kang ekspresyon na madaming resulta gawa ng mga iba't ibang kondisyon, maari kang gumamit ng mga sumusunod
 
-    sakaling
-    sakali
-    kung_sakaling
-    sakali_na
-    kung_sakali_na
-    kalagayan
-    kaukulan
+    hakdog
+    kays
 
 Halimbawa
 
     pangalan_mo = "Mabait"
 
-    sakaling pangalan_mo
+    hakdog pangalan_mo
     ay "Maliksi"
       mag_print "Ikaw ay si Maliksi!"
     ay "Matipuno"
       mag_print "Ikaw ay si Matipuno!"
     ay "Mabait"
       mag_print "Ikaw ay si Mabait!"
-    maliban_dito
+    ginagawa_mue
       mag_print "Magandang araw sa iyo!"
-    wakas
+    finish_na
 
-### tiyakin
+### siguraduhing
 
 Kung mayroon kang ekspresyon na gusto mong masunod kahit ano pa ang kahihinatnan nito, gumamit ng mga sumusunod
 
-    tiyaking
-    matiyak
-    tiyakin
     siguraduhing
     siguraduhin
-    panigurado
 
 Halimbawa
 
-    simulan
+    wala_na
       itaas "May sira!"
     agapan
       mag_print "Ipagpatuloy..."
       itaas "May nasira na na-agapan"
-    tiyaking
+    siguraduhing
       mag_print "Tapos na"
-    wakas
+    finish_na
 
 ### grupo
 
@@ -208,41 +185,38 @@ Halimbawa
       bilang Aso
         ang tahol
           mag_print "Woof..."
-        wakas
+        finish_na
 
         ang kumanin
           mag_print "..."
-        wakas
+        finish_na
 
         ang ikembot_ang_buntot
           mag_print "Ginagawa ko ito dahil masaya ako!"
-        wakas
-      wakas
-    wakas
+        finish_na
+      finish_na
+    finish_na
 
     dami = 6
     browny = Hayop::Aso.kumatawan
-    browny.ikembot_ang_buntot kapag dami >= Hayop::KABUUAN
+    browny.ikembot_ang_buntot ip dami >= Hayop::KABUUAN
 
-### ngunit_kapag
+### agik_ginagawa_mue
 
-Gumamit ng ngunit_kapag kapag mayroon ka pang kondisyon maliban sa nauna ng kondisyon
+Gumamit ng agik_ginagawa_mue kapag mayroon ka pang kondisyon maliban sa nauna ng kondisyon
 
-    ngunit_kapag
-    kung_kapag
-    ngunit_kapag_ang
-    kung_kapag_ang
-
+    agik_ginagawa_mue
+    elsip
 Halimbawa
 
     pangalan_mo = "Masipag"
-    kapag_ang pangalan_mo == "Matipuno"
+    agik pangalan_mo == "Matipuno"
       mag_print "Ikaw ay si Matipuno!"
-    ngunit_kapag_ang pangalan_mo == "Masipag"
+    agik_ginagawa_mue pangalan_mo == "Masipag"
       mag_print "Ikaw ay si Masipag!"
-    maliban_sa_mga_ito
+    ginagawa_mue
       mag_print "Wala kang rekord saamin!"
-    wakas
+    finish_na
 
 ### ang
 
@@ -261,14 +235,14 @@ Halimbawa
       baitang  = estudyante[:baitang]
       seksiyon = estudyante[:seksiyon]
 
-      mag_print <<-KATAPUSAN
+      mag_print <<-FINISH_NA
         Pangalan: #{pangalan}
         Edad:     #{edad}
         Tirahan:  #{tirahan}
         Baitang:  #{baitang}
         Seksiyon: #{seksiyon}
-      KATAPUSAN
-    wakas
+      FINISH_NA
+    finish_na
 
     id({
       pangalan: "Maliksi Batubalani",
@@ -287,15 +261,15 @@ Ang agapan ay ginagamit kung mayroon maaaring mangyaring pagkakamali na gusto mo
 
 Halimbawa
 
-    simulan
+    wala_na
       1 / 0
     agapan
       mag_print "Hindi ito posible!"
-    wakas
+    finish_na
 
 ### dapat
 
-Kapag mayroon kang ekspresyon na mayroong inaasahan na resulta, gumamit ng dapat
+ip mayroon kang ekspresyon na mayroong inaasahan na resulta, gumamit ng dapat
 
     dapat
 
@@ -303,17 +277,17 @@ Halimbawa
 
     panulat_mo = "lapis"
 
-    papel = sakaling panulat_mo
+    papel = hakdog panulat_mo
       ay "lapis" dapat "bond paper"
       ay "ballpen" dapat "dilaw na papel"
-      maliban_sa_mga_ito "intermediate paper"
-    wakas
+      ginagawa_mue "intermediate paper"
+    finish_na
 
     mag_print "Ang papel na gagamitin mo ay #{papel}"
 
 ### magbigay_daan
 
-Kapag ang ekspresyon ay mayroong inaasahang dapat na ibigay na resulta habang gumagana pa ang program, gumamit ng magbigay_daan
+ip ang ekspresyon ay mayroong inaasahang dapat na ibigay na resulta habang gumagana pa ang program, gumamit ng magbigay_daan
 
     magbigay_daan
     bigyang_daan
@@ -324,19 +298,19 @@ Halimbawa
       mag_print "------------------------------------------"
       magbigay_daan
       mag_print "------------------------------------------"
-    wakas
+    finish_na
 
     ang ID(impormasyon = {})
-      gumawaNgID na_ganito
-        mag_print <<-KATAPUSAN
+      gumawaNgID adbans
+        mag_print <<-FINISH_NA
           Pangalan: #{impormasyon[:pangalan]}
           Edad:     #{impormasyon[:edad]}
           Tirahan:  #{impormasyon[:tirahan]}
           Baitang:  #{impormasyon[:baitang]}
           Seksiyon: #{impormasyon[:seksiyon]}
-        KATAPUSAN
-      wakas
-    wakas
+        FINISH_NA
+      finish_na
+    finish_na
 
     ID({
       pangalan: "Maliksi Batubalani",
@@ -348,7 +322,7 @@ Halimbawa
 
 ### para_sa
 
-Kapag may listahan na nais mong isa isahin, gumamit ng para_sa
+ip may listahan na nais mong isa isahin, gumamit ng para_sa
 
     para_sa
     para_ang
@@ -356,32 +330,32 @@ Kapag may listahan na nais mong isa isahin, gumamit ng para_sa
 Halimbawa
 
     listahan_ng_mga_prutas = ["mansanas", "mangga", "guava", "santol", "ubas"]
-    para_sa prutas na_nasa listahan_ng_mga_prutas ganito_gawin
+    para_sa prutas na_nasa listahan_ng_mga_prutas adbans
       mag_print prutas.sa_malaking_titik
-    wakas
+    finish_na
 
-### subukang_muli
+### neba_gibap
 
-Ginagamit ang subukang_muli upang umikot muli ang ekspresyon kung may sirang nangyari at nais mo ulit subukan pa andarin
+Ginagamit ang neba_gibap upang umikot muli ang ekspresyon kung may sirang nangyari at nais mo ulit subukan pa andarin
 
-    subukang_muli
+    neba_gibap
 
 Halimbawa
 
     bilang_ng_pagkakamali = 0
-    simula
+    glhf
       1 / 0
     agapan => pagkakamali
       bilang_ng_pagkakamali += 1
-      subukang_muli kapag bilang_ng_pagkakamali < 3
+      neba_gibap ip bilang_ng_pagkakamali < 3
       iangat "malubhang pagkakamali"
     siguraduhing
       mag_print "Tapos na"
-    wakas
+    finish_na
 
 ### ibalik
 
-Kapag mayroon kang ibabalik na resulta sa nagtawag ng ang
+ip mayroon kang ibabalik na resulta sa nagtawag ng ang
 
     ibalik
     ibalik_ang
@@ -399,25 +373,22 @@ Halimbawa
     ang magdagdag_ng_isa(halaga)
       idadagdag = halaga + 1
       ibalik_ang halaga
-    wakas
+    finish_na
 
-### kapag
+### agik
 
-Ginagamit ang kapag kung meron kang kondisyon sa iyong ekspresyon
+Ginagamit ang agik kung meron kang kondisyon sa iyong ekspresyon
 
-    kapag
-    kapag_ang
-    kapag_na_ang
-    kung
-    kung_ang
+    agik
+    ip
 
 Halimbawa
 
-    kapag_ang 1 > 0
+    agik 1 > 0
       mag_print "mas madami!"
-    kung_iba
+    ginagawa_mue
       mag_print "may sira"
-    wakas
+    finish_na
 
 ### bilang
 
@@ -431,29 +402,29 @@ Halimbawa
       bilang Donut
         ang flavor
           mag_print 'Strawberry!'
-        wakas
-      wakas
-    wakas
+        finish_na
+      finish_na
+    finish_na
 
     tinapay = Tinapay::Donut.kumatawan
     tinapay.flavor
     => 'Strawberry!'
 
-### habang
+### ako_magisip
 
-Gumamit ng habang kung may hinihintay pa na resulta, kondisyon o pangyayari
+Gumamit ng ako_magisip kung may hinihintay pa na resulta, kondisyon o pangyayari
 
-    habang
-    habang_ang
+    ako_magisip
+    waylwaylwayl
 
 Halimbawa
 
-    may_buhay = totoo
+    may_buhay = istroo
 
-    habang may_buhay
+    ako_magisip may_buhay
       mag_print 'may pag-asa!'
-      hinto
-    wakas
+      auko_na
+    finish_na
     => 'may pag-asa!'
 
 ### alyas
@@ -467,9 +438,9 @@ Halimbawa
     bilang Hayop
       ang aso
         mag_print 'si browny ay mabait!'
-      wakas
+      finish_na
       alyas browny aso
-    wakas
+    finish_na
 
     hayop = Hayop.kumatawan
     hayop.browny
@@ -487,16 +458,16 @@ Halimbawa
     grupo Manggagawa
       bilang Magsasaka
         ang pananim
-          ['sibuyas', 'kamatis', 'sili', 'palay', 'mais'].isaisahin na_ganito |pananim|
+          ['sibuyas', 'kamatis', 'sili', 'palay', 'mais'].isaisahin adbans |pananim|
             mag_print "Mag tatanim ng #{pananim} ngayong panahon"
-          wakas
-        wakas
-      wakas
-    wakas
+          finish_na
+        finish_na
+      finish_na
+    finish_na
 
     kung nakatukoy?(Manggagawa::Magsasaka)
       mag_print 'May nakatukoy!'
-    wakas
+    finish_na
 
 ### tanggalin
 
@@ -511,40 +482,40 @@ Halimbawa
       bilang Aso
         ang tahol
           mag_print 'baw waw!'
-        wakas
-      wakas
-    wakas
+        finish_na
+      finish_na
+    finish_na
 
     bilang Pusa < Hayop::Aso
       tanggalin tahol
       ang meow
         mag_print 'meow wahu!'
-      wakas
-    wakas
+      finish_na
+    finish_na
 
     pusa = Pusa.kumatawan
 
-    simulan
+    wala_na
       pusa.tahol
     agapan => pagkakamali
       mag_print "ang pagkakamali ay '#{pagkakamali}'"
-    wakas
+    finish_na
 
-### ihinto
+### tama_na
 
-Gumamit ng 'hinto' kung may nais kang matapos na kondisyon gamit ang 'habang'
+Gumamit ng 'auko_na' kung may nais kang matapos na kondisyon gamit ang 'ako_magisip'
 
-    ihinto
-    hinto
+    tama_na
+    auko_na
 
 Halimbawa
 
     nakamit = mali
 
-    habang nakamit == mali
+    ako_magisip nakamit == mali
       mag_print 'hindi pa nakakamit!'
-      hinto
-    wakas
+      auko_na
+    finish_na
 
     mag_print 'nakamit na!'
 
@@ -561,13 +532,12 @@ Halimbawa
 
   Tignan ang [para_sa](#para_sa)
 
-### ganito
+### adbans
 
-Ginagamit ang 'ganito' kung nais mong i konteksto ang kasulukuyang listahan
+Ginagamit ang 'adbans' kung nais mong i konteksto ang kasulukuyang listahan
 
-    na_ganito
-    nang_ganito
-    ganito
+    adbans
+    dududu
 
 Halimbawa
 
@@ -585,10 +555,10 @@ Halimbawa
 
 		numero = 0
 		panghuling_numero = 5
-		simula
+		glhf
 		  mag_print "Ang numero ay #{numero} na"
 		  numero += 1
-		wakas hanggang numero < panghuling_numero
+		finish_na hanggang numero < panghuling_numero
 
 ### maliban_na
 
@@ -603,13 +573,13 @@ Halimbawa
       { pangalan: 'Karmen', kasarian: 'babae' }
     ]
 
-    mga_persona.isaisahin ng_ganito |tao|
+    mga_persona.isaisahin adbans |tao|
       malibang tao[:kasarian] == 'lalaki'
         mag_print "si #{tao[:pangalan]} ay babae!"
-      maliban_dito
+      ginagawa_mue
         mag_print "si #{tao[:pangalan]} ay lalaki!"
-      wakas
-    wakas
+      finish_na
+    finish_na
 
 ### o
 
@@ -620,8 +590,8 @@ Ang 'o' ay ginagamit upang piliin ang nagsasauli ng tama.
 
 Halimbawa
 
-    totoo o mali
-    => totoo
+    istroo o mali
+    => istroo
 
 ## Pagtulong sa pagdedevelop ng Bato
 

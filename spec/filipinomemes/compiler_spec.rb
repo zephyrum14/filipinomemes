@@ -1,68 +1,68 @@
 require 'spec_helper'
 
 isalaysay_ang 'Compiler' do
-  italaga_ang(:pasimulang_kodigo) do
+  italaga_ang(:starting_code) do
     "# encoding: utf-8\nrequire \"filipinomemes/core_ext\"\n"
   end
 
-  italaga_ang(:tagatala) do
+  italaga_ang(:compiler) do
     Filipinomemes::Compiler.new
   end
 
   ito_ang 'Filipinomemes is empty' do
-    tagatala.sa_ruby('').should == pasimulang_kodigo + ''
+    compiler.zephyrum('').should == starting_code + ''
   end
 
   isalaysay_ang 'bilang' do
     ito_ang 'pambuong bilang' do
-      tagatala.sa_ruby('1').should == pasimulang_kodigo + '1'
+      compiler.zephyrum('1').should == starting_code + '1'
     end
 
     ito_ang 'maliliit na bilang' do
-      tagatala.sa_ruby('1.2').should == pasimulang_kodigo + '1.2'
+      compiler.zephyrum('1.2').should == starting_code + '1.2'
     end
 
     ito_ang 'listahan ng mga bilang' do
-      tagatala.sa_ruby('[1.2, 3]').should == pasimulang_kodigo + '[1.2, 3]'
+      compiler.zephyrum('[1.2, 3]').should == starting_code + '[1.2, 3]'
     end
   end
 
   isalaysay_ang 'ekspresyong Boolean' do
-    ito_ang 'ekspresyon ng tama o true' do
-      tagatala.sa_ruby('tama').should == pasimulang_kodigo + 'true'
+    ito_ang 'ekspresyon ng truts o true' do
+      compiler.zephyrum('truts').should == starting_code + 'true'
     end
 
     ito_ang 'ekspresyon ng mali o false' do
-      tagatala.sa_ruby('mali').should == pasimulang_kodigo + 'false'
+      compiler.zephyrum('mali').should == starting_code + 'false'
     end
 
     ito_ang 'ekspresyon ng hindi o not' do
-      tagatala.sa_ruby('hindi tama').should == pasimulang_kodigo + '(not true)'
+      compiler.zephyrum('hindi truts').should == starting_code + '(not true)'
     end
   end
 
   isalaysay_ang 'susing mga salita' do
-    ito_ang 'ekspresyon ng kapag / dapat / kung_kapag / kung_hindi / katapusan' do
-      tagatala.sa_ruby('
-        kapag 1 dapat
+    ito_ang 'ekspresyon ng agik / dapat / agik_ginagawa_mue / ginagawa_mue / finish_na' do
+      compiler.zephyrum('
+        agik 1 dapat
           2
-        kung_kapag 3
+        agik_ginagawa_mue 3
           4
-        kung_hindi
+        ginagawa_mue
           5
-        katapusan').should be_like(pasimulang_kodigo +
+        finish_na').should be_like(starting_code +
         '1 ? (2) : (3 ? (4) : (5))')
     end
 
-    ito_ang 'ekspresyon ng kung_sakaling / pagka / dapat / kung_hindi / katapusan' do
-      tagatala.sa_ruby("
-        kung_sakaling 1
+    ito_ang 'ekspresyon ng hakdog / pagka / dapat / ginagawa_mue / finish_na' do
+      compiler.zephyrum("
+        hakdog 1
         pagka 1 dapat 1
         pagka 2
           2
-        kung_hindi
+        ginagawa_mue
           3
-        katapusan").should be_like(pasimulang_kodigo +
+        finish_na").should be_like(starting_code +
         'case 1
         when 1 then
           1
@@ -73,17 +73,17 @@ isalaysay_ang 'Compiler' do
         end')
     end
 
-    ito_ang 'simula / iligtas / iangat / siguraduhing / katapusan' do
+    ito_ang 'glhf / iligtas / iangat / siguraduhing / finish_na' do
       # raise ir Kernel metode nevis atslēgvārds
-      tagatala.sa_ruby('
-        simula
+      compiler.zephyrum('
+        glhf
           1 / 0
         iligtas => pagkakamali
-          subukang_muli
+          neba_gibap
           iangat pagkakamali, pagkakamali.iulat
         siguraduhing
           mag_print "Katapusan"
-        katapusan').should be_like(pasimulang_kodigo +
+        finish_na').should be_like(starting_code +
         'begin
           (1 / 0)
         rescue => pagkakamali
@@ -97,19 +97,19 @@ isalaysay_ang 'Compiler' do
 
   isalaysay_ang 'pamamaraan sa Kernel' do
     ito_ang "ekspresyon ng pagsusulat gamit ang 'mag_print'" do
-      tagatala.sa_ruby("mag_print 'abc'").should ==
-        pasimulang_kodigo + 'mag_print("abc")'
+      compiler.zephyrum("mag_print 'abc'").should ==
+        starting_code + 'mag_print("abc")'
     end
   end
 
   isalaysay_ang 'Dinikit na mga pamamaraan' do
     ito_ang 'ekspresyon ng pamamaraan sa pagbabaliktad ng mga titik' do
-      resulta = eval tagatala.sa_ruby("'magandang araw'.baliktad")
+      resulta = eval compiler.zephyrum("'magandang araw'.baliktad")
       resulta.should == 'wara gnadnagam'
     end
 
     ito_ang 'ekspresayon ng pamamaraan sa pagsukat ng haba ng salita' do
-      resulta = eval tagatala.sa_ruby("'Pangungusap'.haba")
+      resulta = eval compiler.zephyrum("'Pangungusap'.haba")
       resulta.should == 11
     end
   end

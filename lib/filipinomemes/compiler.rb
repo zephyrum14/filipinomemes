@@ -6,16 +6,16 @@ module Filipinomemes
   class Compiler
     def initialize; end
 
-    PASIMULANG_KODIGO = "# encoding: utf-8\nrequire \"filipinomemes/core_ext\"\n".freeze
+    STARTING_CODE = "# encoding: utf-8\nrequire \"filipinomemes/core_ext\"\n".freeze
 
-    def sa_ruby(kodigo)
+    def zephyrum(code)
       ruby2ruby = Ruby2Ruby.new
       parser = RubyParser.new
-      sexp = parser.process("# encoding: utf-8\n#{kodigo}")
+      sexp = parser.process("# encoding: utf-8\n#{code}")
 
-      ruby_kodigo = ruby2ruby.process(sexp)
+      ruby_code = ruby2ruby.process(sexp)
 
-      "#{PASIMULANG_KODIGO}#{ruby_kodigo}"
+      "#{STARTING_CODE}#{ruby_code}"
     end
   end
 end

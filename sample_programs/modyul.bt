@@ -3,18 +3,18 @@ grupo MgaAlagangHayop
   bilang Aso
     ang tahol
       mag_print "Woof..."
-    wakas
+    finish_na
 
     ang kumanin
       mag_print "..."
-    wakas
+    finish_na
 
     ang ikembot_ang_buntot
       mag_print "Ginagawa ko ito dahil masaya ako!"
-    wakas
-  wakas  
-wakas
+    finish_na
+  finish_na  
+finish_na
 
 dami = 6
 browny = MgaAlagangHayop::Aso.gumawa
-browny.ikembot_ang_buntot kapag dami >= MgaAlagangHayop::KAILANGAN_DAMI_NG_ASO
+browny.ikembot_ang_buntot ip dami >= MgaAlagangHayop::KAILANGAN_DAMI_NG_ASO

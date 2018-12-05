@@ -1,8 +1,8 @@
 pangalan_mo = "Masipag"
-kapag_ang pangalan_mo == "Matipuno"
+agik pangalan_mo == "Matipuno"
   mag_print "Ikaw ay si Matipuno!"
-ngunit_kapag_ang pangalan_mo == "Masipag"
+agik_ginagawa_mue pangalan_mo == "Masipag"
   mag_print "Ikaw ay si Masipag!"
-maliban_sa_mga_ito
+ginagawa_mue
   mag_print "Wala kang rekord dito!"
-wakas
+finish_na

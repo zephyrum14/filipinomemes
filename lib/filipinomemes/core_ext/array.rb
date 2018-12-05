@@ -7,7 +7,7 @@ class Array
   alias pasok push
   alias ipasok push
   alias huli last
-  alias dulo last
+  alias gg last
   alias una first
   alias isaisahin each
   alias kada each

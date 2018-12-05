@@ -1,9 +1,9 @@
 bilang Hayop
   ang aso
     mag_print 'si browny ay mabait!'
-  wakas
+  finish_na
   alyas browny aso
-wakas
+finish_na
 
 hayop = Hayop.gumawa
 hayop.browny
