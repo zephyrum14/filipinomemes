@@ -1,7 +1,7 @@
-may_buhay = istroo
+may_buhay = israel
 
 ako_magisip may_buhay
-  mag_print 'may pag-asa!'
+  panomonasabe 'may pag-asa!'
 
   auko_na
 finish_na

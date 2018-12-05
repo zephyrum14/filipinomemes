@@ -1,8 +1,7 @@
-# Bato
+# Filipinomemes
 
-Ang 'Bato Programming Language' ay isang scripting language sa wikang Filipino.
+Filipinomemes is a programming language that uses filipino memes as it's syntaxes
 
-Subukan ang [Bato](https://trybato.herokuapp.com/)
 
 ## Pagtatalaga
 
@@ -21,9 +20,9 @@ Ang kadahilanang ginamit ang pangalang 'bato' ay dahil ang Ruby ay isang uri ng 
 Gumawa ng isang file na `kamusta_mundo.bt` na may mga sumusunod na nilalaman
 
     ip 1 > 0
-      mag_print "Kumusta mundo!"
+      panomonasabe "Kumusta mundo!"
     ginagawa_mue
-      mag_print "Mayroong sira"
+      panomonasabe "Mayroong sira"
     finish_na
 
 at pa-andarin ang program sa pamamagitan ng
@@ -42,30 +41,30 @@ at pa-andarin ang program sa pamamagitan ng
     FINISH_NA
 
 ### Dinikit na mga pamamaraan
-    'magandang araw'.baliktad         # => 'wara gnadnagam'
-    'Pangungusap'.haba                # => 11
+    'magandang araw'.sikstinayn         # => 'wara gnadnagam'
+    'Pangungusap'.longgadog                # => 11
 
 ### Ekspresyong Boolean
 
-    truts
-    mali
-    hindi truts
+    israel
+    isrong
+    isnot
 
 ### Kondisyon
 
 Paggamit ng kondisyon.
 
-    agik halaga > 100 dapat
+    agik halaga > 100 den
       "ayos lang"
-    agik_ginagawa_mue halaga > 0 dapat
+    agik_ginagawa_mue halaga > 0 den
       "ok lang"
     ginagawa_mue
       "wala lang"
     finish_na
 
     hakdog halaga
-    pagka 5 dapat "lima"
-    pagka 4 dapat "apat"
+    wen 5 den "lima"
+    wen 4 den "apat"
     ginagawa_mue "wala"
     finish_na
 
@@ -73,28 +72,28 @@ Paggamit ng kondisyon.
 
     bilang_ng_pagkakamali = 0
     glhf
-      # mag komento ip hindi sigurado
+      # mag komento kung hindi sigurado
       1 / 0
-    iligtas => pagkakamali
+    reskyu => pagkakamali
       bilang_ng_pagkakamali += 1
       neba_gibap ip bilang_ng_pagkakamali < 3
-      iangat "malubhang pagkakamali"
-    siguraduhing
-      mag_print "Tapos na"
+      rays "malubhang pagkakamali"
+    may_raket
+      panomonasabe "den na"
     finish_na
 
-### Panuntunan
+### ge_talon
 
-    ang iprintAngPangalan(pangalan = wala)
+    ge_talon panomonasabeAngPangalan(pangalan = wala)
       ip pangalan != wala
-        mag_print "Magandang araw sa iyo #{pangalan}!"
+        panomonasabe "Magandang araw sa iyo #{pangalan}!"
       ginagawa_mue
-        mag_print "Magandang araw!"
+        panomonasabe "Magandang araw!"
       finish_na
     finish_na
 
-    iprintAngPangalan "Maria" # => "Magandang araw sa iyo Maria!"
-    iprintAngPangalan         # => "Magandang araw!"
+    panomonasabeAngPangalan "Maria" # => "Magandang araw sa iyo Maria!"
+    panomonasabeAngPangalan         # => "Magandang araw!"
 
 ## Paggamit ng mga ekspresyon ng mga salita sa program
 
@@ -110,9 +109,9 @@ Halimbawa
 
     bilang_ng_saging = 2
     ip bilang_ng_saging > 1
-      mag_print "Mayroon akong #{bilang_ng_saging} saging! 🍌"
+      panomonasabe "Mayroon akong #{bilang_ng_saging} saging! 🍌"
     ginagawa_mue
-      mag_print "Wala na akong saging! 😐"
+      panomonasabe "Wala na akong saging! 😐"
     finish_na
 
 ###  ginagawa_mue
@@ -126,9 +125,9 @@ Halimbawa
 
     pangalan_mo = "Maliksi"
     agik pangalan_mo == "Maliksi"
-      mag_print "Ikaw ay si #{pangalan_mo}!"
+      panomonasabe "Ikaw ay si #{pangalan_mo}!"
     ginagawa_mue
-      mag_print "Magandang araw sa iyo #{pangalan_mo}!"
+      panomonasabe "Magandang araw sa iyo #{pangalan_mo}!"
     finish_na
 
 ### hakdog
@@ -144,61 +143,61 @@ Halimbawa
 
     hakdog pangalan_mo
     ay "Maliksi"
-      mag_print "Ikaw ay si Maliksi!"
+      panomonasabe "Ikaw ay si Maliksi!"
     ay "Matipuno"
-      mag_print "Ikaw ay si Matipuno!"
+      panomonasabe "Ikaw ay si Matipuno!"
     ay "Mabait"
-      mag_print "Ikaw ay si Mabait!"
+      panomonasabe "Ikaw ay si Mabait!"
     ginagawa_mue
-      mag_print "Magandang araw sa iyo!"
+      panomonasabe "Magandang araw sa iyo!"
     finish_na
 
-### siguraduhing
+### may_raket
 
 Kung mayroon kang ekspresyon na gusto mong masunod kahit ano pa ang kahihinatnan nito, gumamit ng mga sumusunod
 
-    siguraduhing
-    siguraduhin
+    may_raket
+    ensyur
 
 Halimbawa
 
     wala_na
-      itaas "May sira!"
-    agapan
-      mag_print "Ipagpatuloy..."
-      itaas "May nasira na na-agapan"
-    siguraduhing
-      mag_print "Tapos na"
+      rays "May sira!"
+    reskyu
+      panomonasabe "Ipagpatuloy..."
+      rays "May nasira na na-reskyu"
+    may_raket
+      panomonasabe "den na"
     finish_na
 
-### grupo
+### mojul
 
-Ang grupo ay ang lalagyanan ng mga kabilang na klase sa iyong program
+Ang mojul ay ang lalagyanan ng mga kabilang na klase sa iyong program
 
-    grupo
+    mojul
 
 Halimbawa
 
-    grupo Hayop
+    mojul Hayop
       KABUUAN = 5
 
       bilang Aso
         ang tahol
-          mag_print "Woof..."
+          panomonasabe "Woof..."
         finish_na
 
         ang kumanin
-          mag_print "..."
+          panomonasabe "..."
         finish_na
 
         ang ikembot_ang_buntot
-          mag_print "Ginagawa ko ito dahil masaya ako!"
+          panomonasabe "Ginagawa ko ito dahil masaya ako!"
         finish_na
       finish_na
     finish_na
 
     dami = 6
-    browny = Hayop::Aso.kumatawan
+    browny = Hayop::Aso.bago
     browny.ikembot_ang_buntot ip dami >= Hayop::KABUUAN
 
 ### agik_ginagawa_mue
@@ -211,31 +210,31 @@ Halimbawa
 
     pangalan_mo = "Masipag"
     agik pangalan_mo == "Matipuno"
-      mag_print "Ikaw ay si Matipuno!"
+      panomonasabe "Ikaw ay si Matipuno!"
     agik_ginagawa_mue pangalan_mo == "Masipag"
-      mag_print "Ikaw ay si Masipag!"
+      panomonasabe "Ikaw ay si Masipag!"
     ginagawa_mue
-      mag_print "Wala kang rekord saamin!"
+      panomonasabe "Wala kang rekord saamin!"
     finish_na
 
-### ang
+### ge_talon
 
-Ang ang ay may kalakip na pangalan upang ito ay matawag sa program
+Ang ge_talon ay may kalakip na pangalan upang ito ay matawag sa program
 
-    ang
-    panuntunan
-    panuntunang
+    ge_talon
+    dep
+
 
 Halimbawa
 
-    ang id(estudyante = {})
+    dep id(estudyante = {})
       pangalan = estudyante[:pangalan]
       edad     = estudyante[:edad]
       tirahan  = estudyante[:tirahan]
       baitang  = estudyante[:baitang]
       seksiyon = estudyante[:seksiyon]
 
-      mag_print <<-FINISH_NA
+      panomonasabe <<-FINISH_NA
         Pangalan: #{pangalan}
         Edad:     #{edad}
         Tirahan:  #{tirahan}
@@ -252,57 +251,57 @@ Halimbawa
       seksiyon: "Masisipag"
     })
 
-### agapan
+### reskyu
 
-Ang agapan ay ginagamit kung mayroon maaaring mangyaring pagkakamali na gusto mong maisalba o mailigtas
+Ang reskyu ay ginagamit kung mayroon maaaring mangyaring pagkakamali na gusto mong maisalba o mailigtas
 
-    iligtas
-    agapan
+    reskyu
+    reskyu
 
 Halimbawa
 
     wala_na
       1 / 0
-    agapan
-      mag_print "Hindi ito posible!"
+    reskyu
+      panomonasabe "Hindi ito posible!"
     finish_na
 
-### dapat
+### den
 
-ip mayroon kang ekspresyon na mayroong inaasahan na resulta, gumamit ng dapat
+Kung mayroon kang ekspresyon na mayroong inaasahan na resulta, gumamit ng den
 
-    dapat
+    den
 
 Halimbawa
 
     panulat_mo = "lapis"
 
     papel = hakdog panulat_mo
-      ay "lapis" dapat "bond paper"
-      ay "ballpen" dapat "dilaw na papel"
+      ay "lapis" den "bond paper"
+      ay "ballpen" den "dilaw na papel"
       ginagawa_mue "intermediate paper"
     finish_na
 
-    mag_print "Ang papel na gagamitin mo ay #{papel}"
+    panomonasabe "Ang papel na gagamitin mo ay #{papel}"
 
-### magbigay_daan
+### dewei
 
-ip ang ekspresyon ay mayroong inaasahang dapat na ibigay na resulta habang gumagana pa ang program, gumamit ng magbigay_daan
+Kung ang ekspresyon ay mayroong inaasahang dapat na retern na resulta habang gumagana pa ang program, gumamit ng dewei
 
-    magbigay_daan
-    bigyang_daan
+    dewei
+    yild
 
 Halimbawa
 
-    ang gumawaNgID
-      mag_print "------------------------------------------"
-      magbigay_daan
-      mag_print "------------------------------------------"
+    dep gumawaNgID
+      panomonasabe "------------------------------------------"
+      dewei
+      panomonasabe "------------------------------------------"
     finish_na
 
     ang ID(impormasyon = {})
       gumawaNgID adbans
-        mag_print <<-FINISH_NA
+        panomonasabe <<-FINISH_NA
           Pangalan: #{impormasyon[:pangalan]}
           Edad:     #{impormasyon[:edad]}
           Tirahan:  #{impormasyon[:tirahan]}
@@ -320,18 +319,18 @@ Halimbawa
       seksiyon: "Masisipag"
     })
 
-### para_sa
+### poreber
 
-ip may listahan na nais mong isa isahin, gumamit ng para_sa
+Kung may listahan na nais mong isa isahin, gumamit ng poreber
 
-    para_sa
-    para_ang
+    poreber
+    por
 
 Halimbawa
 
     listahan_ng_mga_prutas = ["mansanas", "mangga", "guava", "santol", "ubas"]
-    para_sa prutas na_nasa listahan_ng_mga_prutas adbans
-      mag_print prutas.sa_malaking_titik
+    poreber prutas insayd listahan_ng_mga_prutas adbans
+      panomonasabe prutas.kapitalays
     finish_na
 
 ### neba_gibap
@@ -345,34 +344,26 @@ Halimbawa
     bilang_ng_pagkakamali = 0
     glhf
       1 / 0
-    agapan => pagkakamali
+    reskyu => pagkakamali
       bilang_ng_pagkakamali += 1
       neba_gibap ip bilang_ng_pagkakamali < 3
-      iangat "malubhang pagkakamali"
-    siguraduhing
-      mag_print "Tapos na"
+      rays "malubhang pagkakamali"
+    may_raket
+      panomonasabe "den na"
     finish_na
 
-### ibalik
+### magbalik
 
 ip mayroon kang ibabalik na resulta sa nagtawag ng ang
 
-    ibalik
-    ibalik_ang
     magbalik
-    magbalik_nang
-    isauli
-    isauli_ang
-    ibigay
-    ibigay_ang
-    magbigay
-    magbigay_nang
+    retern
 
 Halimbawa
 
-    ang magdagdag_ng_isa(halaga)
+    dep magdagdag_ng_isa(halaga)
       idadagdag = halaga + 1
-      ibalik_ang halaga
+      magbalik halaga
     finish_na
 
 ### agik
@@ -385,9 +376,9 @@ Ginagamit ang agik kung meron kang kondisyon sa iyong ekspresyon
 Halimbawa
 
     agik 1 > 0
-      mag_print "mas madami!"
+      panomonasabe "mas madami!"
     ginagawa_mue
-      mag_print "may sira"
+      panomonasabe "may sira"
     finish_na
 
 ### bilang
@@ -398,15 +389,15 @@ Ang bilang ay ang pagsasabilang ng isang kaukulang klasipikasyon
 
 Halimbawa
 
-    grupo Tinapay
+    mojul Tinapay
       bilang Donut
-        ang flavor
-          mag_print 'Strawberry!'
+        dep flavor
+          panomonasabe 'Strawberry!'
         finish_na
       finish_na
     finish_na
 
-    tinapay = Tinapay::Donut.kumatawan
+    tinapay = Tinapay::Donut.bago
     tinapay.flavor
     => 'Strawberry!'
 
@@ -419,86 +410,86 @@ Gumamit ng ako_magisip kung may hinihintay pa na resulta, kondisyon o pangyayari
 
 Halimbawa
 
-    may_buhay = istroo
+    may_buhay = israel
 
     ako_magisip may_buhay
-      mag_print 'may pag-asa!'
+      panomonasabe 'may pag-asa!'
       auko_na
     finish_na
     => 'may pag-asa!'
 
 ### alyas
 
-Gumamit ng alyas kung kailangan mo tawagin sa ibang pangalan ang iyong panuntunan
+Gumamit ng alyas kung kailangan mo tawagin sa ibang pangalan ang iyong ge_talon
 
     alyas
 
 Halimbawa
 
     bilang Hayop
-      ang aso
-        mag_print 'si browny ay mabait!'
+      dep aso
+        panomonasabe 'si browny ay mabait!'
       finish_na
       alyas browny aso
     finish_na
 
-    hayop = Hayop.kumatawan
+    hayop = Hayop.bago
     hayop.browny
     => 'si browny ay mabait!'
 
-### nakatukoy?
+### abugbug
 
-Ang nakatukoy? ay ginagamit kung kailangan malaman kung umiiral ang isang grupo o klase.
+Ang abugbug ay ginagamit kung kailangan malaman kung umiiral ang isang mojul o klase.
 
-    nakatukoy?
-    nakasaad?
+    abugbug
+    depaynd
 
 Halimbawa
 
-    grupo Manggagawa
+    mojul Manggagawa
       bilang Magsasaka
-        ang pananim
-          ['sibuyas', 'kamatis', 'sili', 'palay', 'mais'].isaisahin adbans |pananim|
-            mag_print "Mag tatanim ng #{pananim} ngayong panahon"
+        dep pananim
+          ['sibuyas', 'kamatis', 'sili', 'palay', 'mais'].its adbans |pananim|
+            panomonasabe "Mag tatanim ng #{pananim} ngayong panahon"
           finish_na
         finish_na
       finish_na
     finish_na
 
-    kung nakatukoy?(Manggagawa::Magsasaka)
-      mag_print 'May nakatukoy!'
+    kung abugbug(Manggagawa::Magsasaka)
+      panomonasabe 'May nakatukoy!'
     finish_na
 
-### tanggalin
+### una_ulo
 
-Ginagamit ang tanggalin kung may tatanggaling panuntunan sa isang klase
+Ginagamit ang una_ulo kung may tatanggaling ge_talon sa isang klase
 
-    tanggalin
-    magtanggal
+    una_ulo
+    andep
 
 Halimbawa
 
-    grupo Hayop
+    mojul Hayop
       bilang Aso
-        ang tahol
-          mag_print 'baw waw!'
+        dep tahol
+          panomonasabe 'baw waw!'
         finish_na
       finish_na
     finish_na
 
     bilang Pusa < Hayop::Aso
-      tanggalin tahol
-      ang meow
-        mag_print 'meow wahu!'
+      una_ulo tahol
+      dep meow
+        panomonasabe 'meow wahu!'
       finish_na
     finish_na
 
-    pusa = Pusa.kumatawan
+    pusa = Pusa.bago
 
     wala_na
       pusa.tahol
-    agapan => pagkakamali
-      mag_print "ang pagkakamali ay '#{pagkakamali}'"
+    reskyu => pagkakamali
+      panomonasabe "ang pagkakamali ay '#{pagkakamali}'"
     finish_na
 
 ### tama_na
@@ -510,27 +501,24 @@ Gumamit ng 'auko_na' kung may nais kang matapos na kondisyon gamit ang 'ako_magi
 
 Halimbawa
 
-    nakamit = mali
+    nakamit = isrong
 
-    ako_magisip nakamit == mali
-      mag_print 'hindi pa nakakamit!'
+    ako_magisip nakamit == isrong
+      panomonasabe 'hindi pa nakakamit!'
       auko_na
     finish_na
 
-    mag_print 'nakamit na!'
+    panomonasabe 'nakamit na!'
 
-### sa
+### insayd
 
-Ginagamit ang 'sa' kung nais mong matukoy ang kasulukuyang listahan
+Ginagamit ang 'insayd' kung nais mong matukoy ang kasulukuyang listahan
 
-    sa
-    sa_loob_ng
-    nasa
-    na_nasa
+    insayd
 
 Halimbawa
 
-  Tignan ang [para_sa](#para_sa)
+  Tignan dep [poreber](#poreber)
 
 ### adbans
 
@@ -541,30 +529,28 @@ Ginagamit ang 'adbans' kung nais mong i konteksto ang kasulukuyang listahan
 
 Halimbawa
 
-  Tignan ang [magbigay_daan](#magbigay_daan), [nakatukoy?](#nakatukoy?)
+  Tignan ang [dewei](#dewei), [abugbug](#abugbug)
 
-### hanggang
+### hanggang_sa_dulo
 
-Ang 'hanggang' ay magpapatuloy tumakbo hanggang maabot ang tamang kundisyon.
+Ang 'hanggang_sa_dulo' ay magpapatuloy tumakbo hanggang_sa_dulo maabot ang tamang kundisyon.
 
-    hanggang
-    hanggang_ang
-    mapa_hanggang
+    hanggang_sa_dulo
+    antil
 
 Halimbawa
 
 		numero = 0
 		panghuling_numero = 5
 		glhf
-		  mag_print "Ang numero ay #{numero} na"
+		  panomonasabe "Ang numero ay #{numero} na"
 		  numero += 1
-		finish_na hanggang numero < panghuling_numero
+		finish_na hanggang_sa_dulo numero < panghuling_numero
 
-### maliban_na
+### payless
 
-    malibang
-    maliban_na
-    maliban_ang
+    payless
+    anles
 
 Halimbawa
 
@@ -573,11 +559,11 @@ Halimbawa
       { pangalan: 'Karmen', kasarian: 'babae' }
     ]
 
-    mga_persona.isaisahin adbans |tao|
-      malibang tao[:kasarian] == 'lalaki'
-        mag_print "si #{tao[:pangalan]} ay babae!"
+    mga_persona.its adbans |tao|
+      payless tao[:kasarian] == 'lalaki'
+        panomonasabe "si #{tao[:pangalan]} ay babae!"
       ginagawa_mue
-        mag_print "si #{tao[:pangalan]} ay lalaki!"
+        panomonasabe "si #{tao[:pangalan]} ay lalaki!"
       finish_na
     finish_na
 
@@ -586,12 +572,11 @@ Halimbawa
 Ang 'o' ay ginagamit upang piliin ang nagsasauli ng tama.
 
     o
-    o_ang
 
 Halimbawa
 
-    istroo o mali
-    => istroo
+    israel o isrong
+    => israel
 
 ## Pagtulong sa pagdedevelop ng Bato
 

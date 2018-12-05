@@ -55,7 +55,7 @@ RSpec::Core::MemoizedHelpers::ClassMethods.module_eval do
 end
 
 RSpec::Core::MemoizedHelpers.module_eval do
-  alias_method :dapat, :should
+  alias_method :den, :should
 end
 
 require 'filipinomemes/compiler'

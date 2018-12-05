@@ -1,27 +1,27 @@
 # Filipinomemes Programming Language (https://github.com/zephyrum14/filipinomemes)
 
-grupo TimeBomb
+mojul TimeBomb
   BILANG = 5
   bilang Bomba
-    ang tik
-      mag_print 'tik'
+    dep tik
+      panomonasabe 'tik'
     finish_na
 
-    ang tok
-      mag_print 'tok'
+    dep tok
+      panomonasabe 'tok'
     finish_na
 
-    ang sabog
-      mag_print 'kaboom!'
+    dep sabog
+      panomonasabe 'kaboom!'
     finish_na
   finish_na
 finish_na
 
-pasabog = TimeBomb::Bomba.gumawa
+pasabog = TimeBomb::Bomba.bago
 
 numero = 1
 ako_magisip numero <= TimeBomb::BILANG adbans
-	mag_print "#{numero}"
+	panomonasabe "#{numero}"
 
   ip (numero == TimeBomb::BILANG)
     pasabog.sabog
@@ -31,6 +31,6 @@ ako_magisip numero <= TimeBomb::BILANG adbans
     pasabog.tok
   finish_na
 
-  matulog 1
+  tulog_ako 1
 	numero += 1
 finish_na

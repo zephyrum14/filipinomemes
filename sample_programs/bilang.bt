@@ -1,10 +1,10 @@
-grupo Tinapay
+mojul Tinapay
   bilang Donut
-    ang flavor
-      mag_print 'Strawberry!'
+    dep flavor
+      panomonasabe 'Strawberry!'
     finish_na
   finish_na
 finish_na
 
-tinapay = Tinapay::Donut.gumawa
+tinapay = Tinapay::Donut.bago
 tinapay.flavor

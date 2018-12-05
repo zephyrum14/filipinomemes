@@ -1,4 +1,4 @@
 class Module
-  alias panguri attr_accessor
-  alias palawigin extend
+  alias aksesor attr_accessor
+  alias opentaym extend
 end

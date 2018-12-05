@@ -1,3 +1,3 @@
 class Enumerator
-  alias kumuha take
+  alias kuha take
 end

@@ -1,4 +1,4 @@
-ang pibonasyi(n, n1 = 1, n2 = 1)
+dep pibonasyi(n, n1 = 1, n2 = 1)
   ip n <= 2
     [0, n1, n2][n]
   ginagawa_mue
@@ -12,17 +12,17 @@ ang pibonasyi(n, n1 = 1, n2 = 1)
   finish_na
 finish_na
 
-ang pibonasyingPagsuksok(n, n1 = 1, n2 = 1)
+dep pibonasyingPagsuksok(n, n1 = 1, n2 = 1)
   ip n <= 2
     [0, n1, n2][n]
   ginagawa_mue
-    ([wala].umikot.kumuha(n-2).ipasok([n1, n2]) adbans |nakaraan, x|
-      nakaraan.magbagsak(1).itulak(nakaraan[0] + nakaraan[1])
-    finish_na).huli
+    ([wala].pinaikot.kuha(n-2).pushmoyante([n1, n2]) adbans |nakaraan, x|
+      nakaraan.boombagsak(1).pushmoyante(nakaraan[0] + nakaraan[1])
+    finish_na).gg
   finish_na
 finish_na
 
-ang pibonasyingInuulit(n, n1 = 1, n2 = 1)
+dep pibonasyingInuulit(n, n1 = 1, n2 = 1)
   ip n <= 2
     binhi = [0, n1, n2]
     binhi[n]
@@ -31,29 +31,29 @@ ang pibonasyingInuulit(n, n1 = 1, n2 = 1)
   finish_na
 finish_na
 
-ang pibonasyingBuntutangInuulit(n, n1 = 1, n2 = 1)
+dep pibonasyingBuntutangInuulit(n, n1 = 1, n2 = 1)
   magbalik n1 ip n <= 1
   magbalik n2 ip n == 2
   magbalik pibonasyi(n - 1, n2, n1 + n2)
 finish_na
 
-ang pibonasyingPaguulit(n, n1 = 1, n2 = 1)
-  (2..n).sa_bawat_isa {
+dep pibonasyingPaguulit(n, n1 = 1, n2 = 1)
+  (2..n).its {
     n1, n2 = n2, n1 + n2
   }
   magbalik n1
 finish_na
 
-ang pibonasyingPaguulitNaUmiikot(n, n1 = 1, n2 = 1)
-  para_sa i sa 2..n
+dep pibonasyingPaguulitNaUmiikot(n, n1 = 1, n2 = 1)
+  poreber i insayd 2..n
     n1, n2 = n2, n1 + n2
   finish_na
   magbalik n1
 finish_na
 
-mag_print "Gamit ang Panuntunang Pibonasyi sa 10 ay #{pibonasyi 10}"
-mag_print "Gamit ang Panuntunang Pibonasying May Pagsuksok sa 9 ay #{pibonasyingPagsuksok 9}"
-mag_print "Gamit ang Panuntunang Pibonasying Inuulit sa 8 ay #{pibonasyingInuulit 8}"
-mag_print "Gamit ang Panuntunang Pibonasying May Buntot na Inuulit sa 7 ay #{pibonasyingBuntutangInuulit 7}"
-mag_print "Gamit ang Panuntunang Pibonasying Paguulit sa 6 ay #{pibonasyingPaguulit 6}"
-mag_print "Gamit ang Panuntunang Pibonasying Paguulit na Umiikot sa 5 ay #{pibonasyingPaguulitNaUmiikot 5}"
+panomonasabe "Gamit ang Panuntunang Pibonasyi sa 10 ay #{pibonasyi 10}"
+panomonasabe "Gamit ang Panuntunang Pibonasying May Pagsuksok sa 9 ay #{pibonasyingPagsuksok 9}"
+panomonasabe "Gamit ang Panuntunang Pibonasying Inuulit sa 8 ay #{pibonasyingInuulit 8}"
+panomonasabe "Gamit ang Panuntunang Pibonasying May Buntot na Inuulit sa 7 ay #{pibonasyingBuntutangInuulit 7}"
+panomonasabe "Gamit ang Panuntunang Pibonasying Paguulit sa 6 ay #{pibonasyingPaguulit 6}"
+panomonasabe "Gamit ang Panuntunang Pibonasying Paguulit na Umiikot sa 5 ay #{pibonasyingPaguulitNaUmiikot 5}"

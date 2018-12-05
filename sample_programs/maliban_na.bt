@@ -3,10 +3,10 @@ mga_persona = [
   { pangalan: 'Karmen', kasarian: 'babae' }
 ]
 
-mga_persona.isaisahin adbans |tao|
-  malibang tao[:kasarian] == 'lalaki'
-    mag_print "si #{tao[:pangalan]} ay babae!"
+mga_persona.its adbans |tao|
+  payless tao[:kasarian] == 'lalaki'
+    panomonasabe "si #{tao[:pangalan]} ay babae!"
   ginagawa_mue
-    mag_print "si #{tao[:pangalan]} ay lalaki!"
+    panomonasabe "si #{tao[:pangalan]} ay lalaki!"
   finish_na
 finish_na

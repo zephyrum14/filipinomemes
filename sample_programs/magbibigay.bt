@@ -1,14 +1,14 @@
-ang gumawaNgID
-  mag_print "------------------------------------------"
-  
-  magbigay_daan
-  
-  mag_print "------------------------------------------"
+dep gumawaNgID
+  panomonasabe "------------------------------------------"
+
+  dewei
+
+  panomonasabe "------------------------------------------"
 finish_na
 
-ang ID(impormasyon = {})
+dep ID(impormasyon = {})
   gumawaNgID adbans
-    mag_print <<-FINISH_NA
+    panomonasabe <<-FINISH_NA
   Pangalan: #{impormasyon[:pangalan]}
   Edad:     #{impormasyon[:edad]}
   Tirahan:  #{impormasyon[:tirahan]}

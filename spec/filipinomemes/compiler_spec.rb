@@ -28,23 +28,23 @@ isalaysay_ang 'Compiler' do
   end
 
   isalaysay_ang 'ekspresyong Boolean' do
-    ito_ang 'ekspresyon ng truts o true' do
-      compiler.zephyrum('truts').should == starting_code + 'true'
+    ito_ang 'ekspresyon ng israel o true' do
+      compiler.zephyrum('israel').should == starting_code + 'true'
     end
 
-    ito_ang 'ekspresyon ng mali o false' do
-      compiler.zephyrum('mali').should == starting_code + 'false'
+    ito_ang 'ekspresyon ng isrong o false' do
+      compiler.zephyrum('isrong').should == starting_code + 'false'
     end
 
     ito_ang 'ekspresyon ng hindi o not' do
-      compiler.zephyrum('hindi truts').should == starting_code + '(not true)'
+      compiler.zephyrum('hindi israel').should == starting_code + '(not true)'
     end
   end
 
   isalaysay_ang 'susing mga salita' do
-    ito_ang 'ekspresyon ng agik / dapat / agik_ginagawa_mue / ginagawa_mue / finish_na' do
+    ito_ang 'ekspresyon ng agik / den / agik_ginagawa_mue / ginagawa_mue / finish_na' do
       compiler.zephyrum('
-        agik 1 dapat
+        agik 1 den
           2
         agik_ginagawa_mue 3
           4
@@ -54,11 +54,11 @@ isalaysay_ang 'Compiler' do
         '1 ? (2) : (3 ? (4) : (5))')
     end
 
-    ito_ang 'ekspresyon ng hakdog / pagka / dapat / ginagawa_mue / finish_na' do
+    ito_ang 'ekspresyon ng hakdog / wen / den / ginagawa_mue / finish_na' do
       compiler.zephyrum("
         hakdog 1
-        pagka 1 dapat 1
-        pagka 2
+        wen 1 den 1
+        wen 2
           2
         ginagawa_mue
           3
@@ -73,44 +73,44 @@ isalaysay_ang 'Compiler' do
         end')
     end
 
-    ito_ang 'glhf / iligtas / iangat / siguraduhing / finish_na' do
+    ito_ang 'glhf / reskyu / rays / may_raket / finish_na' do
       # raise ir Kernel metode nevis atslēgvārds
       compiler.zephyrum('
         glhf
           1 / 0
-        iligtas => pagkakamali
+        reskyu => pagkakamali
           neba_gibap
-          iangat pagkakamali, pagkakamali.iulat
-        siguraduhing
-          mag_print "Katapusan"
+          rays pagkakamali, pagkakamali.iulat
+        may_raket
+          panomonasabe "Katapusan"
         finish_na').should be_like(starting_code +
         'begin
           (1 / 0)
         rescue => pagkakamali
           retry
-          iangat(pagkakamali, pagkakamali.iulat)
+          rays(pagkakamali, pagkakamali.iulat)
         ensure
-          mag_print("Katapusan")
+          panomonasabe("Katapusan")
         end')
     end
   end
 
   isalaysay_ang 'pamamaraan sa Kernel' do
-    ito_ang "ekspresyon ng pagsusulat gamit ang 'mag_print'" do
-      compiler.zephyrum("mag_print 'abc'").should ==
-        starting_code + 'mag_print("abc")'
+    ito_ang "ekspresyon ng pagsusulat gamit ang 'panomonasabe'" do
+      compiler.zephyrum("panomonasabe 'abc'").should ==
+        starting_code + 'panomonasabe("abc")'
     end
   end
 
   isalaysay_ang 'Dinikit na mga pamamaraan' do
     ito_ang 'ekspresyon ng pamamaraan sa pagbabaliktad ng mga titik' do
-      resulta = eval compiler.zephyrum("'magandang araw'.baliktad")
+      resulta = eval compiler.zephyrum("'magandang araw'.sikstinayn")
       resulta.should == 'wara gnadnagam'
     end
 
     ito_ang 'ekspresayon ng pamamaraan sa pagsukat ng haba ng salita' do
-      resulta = eval compiler.zephyrum("'Pangungusap'.haba")
-      resulta.should == 11
+      resulta = eval compiler.zephyrum("'Zephyrum'.longgadog")
+      resulta.should == 8
     end
   end
 end

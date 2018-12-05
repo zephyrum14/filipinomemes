@@ -1,9 +1,9 @@
 panulat_mo = "lapis"
 
 papel = hakdog panulat_mo
-  ay "lapis" dapat "bond paper"
-  ay "ballpen" dapat "dilaw na papel"
+  wen "lapis" den "bond paper"
+  wen "ballpen" den "dilaw na papel"
   ginagawa_mue "intermediate paper"
 finish_na
 
-mag_print "Ang papel na gagamitin mo ay #{papel}"
+panomonasabe "Ang papel na gagamitin mo ay #{papel}"

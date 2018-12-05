@@ -1,8 +1,8 @@
 require 'io/console'
 
-grupo Batotris
+mojul Batotris
   BERSIYON = '0.1'.freeze
-  palawigin magisa
+  opentaym magisa
 
   bilang Piyesa
     MGA_PIYESA = [
@@ -42,17 +42,17 @@ grupo Batotris
         [0, 0, 0, 0], ],
     ]
 
-    ang initialize(x, y, piyesa = bagong_bloke)
+    dep initialize(x, y, piyesa = bagong_bloke)
       @x = x
       @y = y
       @piyesa = piyesa
     finish_na
 
-    ang magiba_ng_posisyon
+    dep magiba_ng_posisyon
       bilang_ng_paglipat = 0
-      ang_posisyon = Array.kumatawan(4)
-      @piyesa.bilang_bawat_isa adbans |bloke, y|
-        bloke.bilang_bawat_isa adbans |b, x|
+      ang_posisyon = Array.bago(4)
+      @piyesa.its_wid_indeks adbans |bloke, y|
+        bloke.its_wid_indeks adbans |b, x|
           ip b == 1
             ang_posisyon[bilang_ng_paglipat] = [ @x + x, @y + y ]
             bilang_ng_paglipat += 1
@@ -62,38 +62,38 @@ grupo Batotris
       ang_posisyon
     finish_na
 
-    ang kanan
-      Piyesa.kumatawan(@x + 1, @y, @piyesa)
+    dep kanan
+      Piyesa.bago(@x + 1, @y, @piyesa)
     finish_na
 
-    ang kaliwa
-      Piyesa.kumatawan(@x - 1, @y, @piyesa)
+    dep kaliwa
+      Piyesa.bago(@x - 1, @y, @piyesa)
     finish_na
 
-    ang mahulog
-      Piyesa.kumatawan(@x, @y + 1, @piyesa)
+    dep mahulog
+      Piyesa.bago(@x, @y + 1, @piyesa)
     finish_na
 
-    ang pagikot
-      pansamantala = Array.kumatawan(4){ Array.kumatawan(4, 0)}
-      @piyesa.bilang_bawat_isa adbans |linya, y|
-        linya.bilang_bawat_isa adbans |l, x|
+    dep pagikot
+      pansamantala = Array.bago(4){ Array.bago(4, 0)}
+      @piyesa.its_wid_indeks adbans |linya, y|
+        linya.its_wid_indeks adbans |l, x|
           pansamantala[x][y] = l
         finish_na
       finish_na
-      pansamantala.bilang_bawat_isa adbans |linya, i|
-        pansamantala[i] = linya.baliktad
+      pansamantala.its_wid_indeks adbans |linya, i|
+        pansamantala[i] = linya.sikstinayn
       finish_na
-      Piyesa.kumatawan(@x, @y, pansamantala)
+      Piyesa.bago(@x, @y, pansamantala)
     finish_na
 
-    ang bagong_bloke
-      rnd = rand(MGA_PIYESA.haba)
+    dep bagong_bloke
+      rnd = rand(MGA_PIYESA.longgadog)
       MGA_PIYESA[rnd]
     finish_na
   finish_na
 
-  grupo Pananda
+  mojul Pananda
     WALA = 0
     PADER = 1
     AKTIBO = 2
@@ -107,23 +107,23 @@ grupo Batotris
     PADER_LETRA = "🀫 "
     BLOCK_LETRA = "⚀ "
     WALA_LETRA = "  "
-    panguri :dako
+    aksesor :dako
 
-    ang initialize
+    dep initialize
       @sakop = gagalawan
       @dako  = 0
     finish_na
 
-    ang burahin
-      @sakop.bilang_bawat_isa adbans |linya, y|
-        linya.bilang_bawat_isa adbans |l, x|
+    dep burahin
+      @sakop.its_wid_indeks adbans |linya, y|
+        linya.its_wid_indeks adbans |l, x|
           @sakop[y][x] = 0 ip l == Pananda::AKTIBO
         finish_na
       finish_na
     finish_na
 
-    ang burahin_ang_linya
-      @sakop.bilang_bawat_isa adbans |linya, y|
+    dep burahin_ang_linya
+      @sakop.its_wid_indeks adbans |linya, y|
         ip linya == [Pananda::PADER, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::NAKALINYA, Pananda::PADER]
           @dako += 1
           @sakop.delete_at(y)
@@ -132,36 +132,36 @@ grupo Batotris
       finish_na
     finish_na
 
-    ang tapos_na?
+    dep tapos_na?
       @dako >= 40
     finish_na
 
-    ang ay_bloke?(susunod_na_posisyon)
-      resulta = mali
-      susunod_na_posisyon.isaisahin adbans |pos|
+    dep ay_bloke?(susunod_na_posisyon)
+      resulta = isrong
+      susunod_na_posisyon.its adbans |pos|
         ip isang_bloke?(pos[0], pos[1])
-          resulta = truts
+          resulta = israel
         finish_na
       finish_na
       resulta
     finish_na
 
-    ang ipirme(kasulukuyang_posisyon)
-      kasulukuyang_posisyon.isaisahin adbans |pos|
+    dep ipirme(kasulukuyang_posisyon)
+      kasulukuyang_posisyon.its adbans |pos|
         @sakop[pos[1]][pos[0]] = Pananda::NAKALINYA
       finish_na
     finish_na
 
-    ang bago_ipirme(kasulukuyang_posisyon)
-      kasulukuyang_posisyon.isaisahin adbans |pos|
+    dep bago_ipirme(kasulukuyang_posisyon)
+      kasulukuyang_posisyon.its adbans |pos|
         @sakop[pos[1]][pos[0]] = Pananda::AKTIBO
       finish_na
     finish_na
 
-    ang write
+    dep write
       teksto = "\n\e[25D"
-      @sakop.isaisahin adbans |linya|
-        linya.isaisahin adbans |l|
+      @sakop.its adbans |linya|
+        linya.its adbans |l|
           ip l == Pananda::WALA
             teksto += WALA_LETRA
           agik_ginagawa_mue l == Pananda::AKTIBO || l == Pananda::NAKALINYA
@@ -172,51 +172,51 @@ grupo Batotris
         finish_na
         teksto += "\n\e[25D"
       finish_na
-      mag_print teksto
+      panomonasabe teksto
     finish_na
 
     private
 
-    ang isang_bloke?(x, y)
+    dep isang_bloke?(x, y)
       @sakop[y][x] == Pananda::PADER || @sakop[y][x] == Pananda::NAKALINYA
     finish_na
 
-    ang gagalawan
+    dep gagalawan
       f = []
-      TAAS.beses adbans |i|
+      TAAS.ulit adbans |i|
         linya = []
-        LAWAK.beses adbans |j|
+        LAWAK.ulit adbans |j|
           linya[j] = (j == 0 || j == LAWAK - 1 || i == TAAS - 1) ? Pananda::PADER : Pananda::WALA
         finish_na
         f[i] = linya
       finish_na
-      ibalik_ang f
+      magbalik f
     finish_na
   finish_na
 
-  ang burahin_ang_screen
+  dep burahin_ang_screen
     print "\x1b[2J\x1b[0;0H"
   finish_na
 
-  ang mahulog_to_bloke(piyesa, sakop)
+  dep mahulog_to_bloke(piyesa, sakop)
     resulta = piyesa
     loop adbans
       susunod_na_posisyon = resulta.mahulog.magiba_ng_posisyon
       ip sakop.ay_bloke?(susunod_na_posisyon)
-        isauli_ang resulta
+        magbalik resulta
       ginagawa_mue
         resulta = resulta.mahulog
       finish_na
     finish_na
   finish_na
 
-  ang tetris
+  dep tetris
     burahin_ang_screen
 
-    sakop = Babagsakan.kumatawan
+    sakop = Babagsakan.bago
     sakop.write
 
-    piyesa = Piyesa.kumatawan(5, 0)
+    piyesa = Piyesa.bago(5, 0)
 
     pinindot = 'n'
     thread = Thread::start adbans
@@ -228,23 +228,23 @@ grupo Batotris
     finish_na
 
     loop adbans
-      matulog(0.2)
+      tulog_ako(0.2)
       magisa.burahin_ang_screen
-      mag_print "kaliwa: [left key], kanan: [right key], mahulog: [space], ikutin: [up key], q: exit \e[25D"
-      mag_print "\e[25D#{sakop.dako}\e[25D"
+      panomonasabe "kaliwa: [left key], kanan: [right key], mahulog: [space], ikutin: [up key], q: exit \e[25D"
+      panomonasabe "\e[25D#{sakop.dako}\e[25D"
 
       hakdog pinindot
-      ay 'q' dapat
+      wen 'q' den
         exit
-      ay "D" dapat
+      wen "D" den
         pansamantala = piyesa.kaliwa
-      ay "C" dapat
+      wen "C" den
         pansamantala = piyesa.kanan
-      ay 'B' dapat
+      wen 'B' den
         pansamantala = magisa.mahulog_to_bloke(piyesa, sakop)
-      ay ' ' dapat
+      wen ' ' den
         pansamantala = magisa.mahulog_to_bloke(piyesa, sakop)
-      ay "A" dapat
+      wen "A" den
         pansamantala = piyesa.pagikot
       ginagawa_mue
         pansamantala = piyesa.mahulog
@@ -260,10 +260,10 @@ grupo Batotris
         piyesa = piyesa
       ginagawa_mue
         sakop.ipirme(piyesa.magiba_ng_posisyon)
-        piyesa = Piyesa.kumatawan(5, 0)
+        piyesa = Piyesa.bago(5, 0)
         susunod_na_posisyon = piyesa.magiba_ng_posisyon
         ip sakop.ay_bloke?(susunod_na_posisyon)
-          mag_print "game over"
+          panomonasabe "game over"
           tama_na
         finish_na
       finish_na
@@ -274,7 +274,7 @@ grupo Batotris
 
       pinindot = 'n'
       ip sakop.tapos_na?
-        mag_print "matagumpay!"
+        panomonasabe "matagumpay!"
         tama_na
       finish_na
     finish_na

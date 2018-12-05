@@ -1,13 +1,13 @@
 bilang Pangalan
-  panguri :pangalan
+  aksesor :pangalan
 
-  ang initialize(pangalan)
+  dep initialize(pangalan)
     @pangalan = pangalan
   finish_na
 
-  ang ipakitaAngPangalan
-    mag_print mayselp.pangalan
+  dep ipakitaAngPangalan
+    panomonasabe selp.pangalan
   finish_na
 finish_na
 
-Pangalan.gumawa('Joel').ipakitaAngPangalan
+Pangalan.bago('Joel').ipakitaAngPangalan

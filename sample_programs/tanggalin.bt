@@ -1,23 +1,23 @@
-grupo Hayop
+mojul Hayop
   bilang Aso
-    ang tahol
-      mag_print 'baw waw!'
+    dep tahol
+      panomonasabe 'baw waw!'
     finish_na
   finish_na
 finish_na
 
 bilang Pusa < Hayop::Aso
-  tanggalin tahol
+  una_ulo tahol
 
-  ang meow
-    mag_print 'meow wahu!'
+  dep meow
+    panomonasabe 'meow wahu!'
   finish_na
 finish_na
 
-pusa = Pusa.kumatawan
+pusa = Pusa.bago
 
 wala_na
   pusa.tahol
-agapan => pagkakamali
-  mag_print "ang pagkakamali ay '#{pagkakamali}'"
+reskyu => pagkakamali
+  panomonasabe "ang pagkakamali ay '#{pagkakamali}'"
 finish_na

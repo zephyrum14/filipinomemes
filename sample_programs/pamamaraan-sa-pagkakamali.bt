@@ -1,11 +1,11 @@
 bilang_ng_pagkakamali = 0
 glhf
-  # mag komento ip hindi sigurado
+  # mag komento kung hindi sigurado
   1 / 0
-agapan => pagkakamali
+reskyu => pagkakamali
   bilang_ng_pagkakamali += 1
   neba_gibap ip bilang_ng_pagkakamali < 3
-  iangat "malubhang pagkakamali"
-siguraduhing
-  mag_print "Tapos na"
+  rays "malubhang pagkakamali"
+may_raket
+  panomonasabe "den na"
 finish_na

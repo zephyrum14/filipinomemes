@@ -1,5 +1,5 @@
 ip 1 > 0
-  mag_print "Kumusta mundo!"
+  panomonasabe "Kumusta mundo!"
 ginagawa_mue
-  mag_print "Mayroong sira"
+  panomonasabe "Mayroong sira"
 finish_na

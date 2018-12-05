@@ -1,8 +1,8 @@
 pangalan_mo = "Masipag"
 agik pangalan_mo == "Matipuno"
-  mag_print "Ikaw ay si Matipuno!"
+  panomonasabe "Ikaw ay si Matipuno!"
 agik_ginagawa_mue pangalan_mo == "Masipag"
-  mag_print "Ikaw ay si Masipag!"
+  panomonasabe "Ikaw ay si Masipag!"
 ginagawa_mue
-  mag_print "Wala kang rekord dito!"
+  panomonasabe "Wala kang rekord dito!"
 finish_na

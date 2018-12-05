@@ -1,10 +1,10 @@
-ang iprintAngPangalan(pangalan = wala)
+dep panomonasabeAngPangalan(pangalan = wala)
   ip pangalan != wala
-    mag_print "Magandang araw sa iyo #{pangalan}!"
+    panomonasabe "Magandang araw sa iyo #{pangalan}!"
   ginagawa_mue
-    mag_print "Magandang araw!"
+    panomonasabe "Magandang araw!"
   finish_na
 finish_na
 
-iprintAngPangalan "Maria" # => "Magandang araw sa iyo Maria!"
-iprintAngPangalan # => "Magandang araw!"
+panomonasabeAngPangalan "Maria" # => "Magandang araw sa iyo Maria!"
+panomonasabeAngPangalan # => "Magandang araw!"

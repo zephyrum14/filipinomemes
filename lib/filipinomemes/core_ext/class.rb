@@ -1,4 +1,3 @@
 class Class
-  alias gumawa new
-  alias kumatawan new
+  alias bago new
 end

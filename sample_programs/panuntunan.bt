@@ -1,11 +1,11 @@
-ang gumawaNgID(estudyante = {})
+dep gumawaNgID(estudyante = {})
   pangalan = estudyante[:pangalan]
   edad = estudyante[:edad]
   tirahan = estudyante[:tirahan]
   baitang = estudyante[:baitang]
   seksiyon = estudyante[:seksiyon]
-  
-  mag_print <<-FINISH_NA
+
+  panomonasabe <<-FINISH_NA
   	Pangalan: #{pangalan}
 	Edad:     #{edad}
 	Tirahan:  #{tirahan}
