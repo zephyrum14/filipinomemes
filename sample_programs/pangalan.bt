@@ -1,0 +1,10 @@
+ang iprintAngPangalan(pangalan = wala)
+  kapag pangalan != wala
+    mag_print "Magandang araw sa iyo #{pangalan}!"
+  kung_hindi
+    mag_print "Magandang araw!"
+  wakas
+wakas
+
+iprintAngPangalan "Maria" # => "Magandang araw sa iyo Maria!"
+iprintAngPangalan # => "Magandang araw!"

@@ -1,0 +1,8 @@
+nakamit = mali
+
+habang nakamit == mali
+  mag_print 'hindi pa nakakamit!'
+  hinto
+wakas
+
+mag_print 'nakamit na!'

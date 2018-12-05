@@ -1,0 +1,20 @@
+grupo MgaAlagangHayop
+  KAILANGAN_DAMI_NG_ASO = 5
+  bilang Aso
+    ang tahol
+      mag_print "Woof..."
+    wakas
+
+    ang kumanin
+      mag_print "..."
+    wakas
+
+    ang ikembot_ang_buntot
+      mag_print "Ginagawa ko ito dahil masaya ako!"
+    wakas
+  wakas  
+wakas
+
+dami = 6
+browny = MgaAlagangHayop::Aso.gumawa
+browny.ikembot_ang_buntot kapag dami >= MgaAlagangHayop::KAILANGAN_DAMI_NG_ASO

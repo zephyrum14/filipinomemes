@@ -1,0 +1,10 @@
+grupo Tinapay
+  bilang Donut
+    ang flavor
+      mag_print 'Strawberry!'
+    wakas
+  wakas
+wakas
+
+tinapay = Tinapay::Donut.gumawa
+tinapay.flavor

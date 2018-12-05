@@ -1,0 +1,8 @@
+pangalan_mo = "Masipag"
+kapag_ang pangalan_mo == "Matipuno"
+  mag_print "Ikaw ay si Matipuno!"
+ngunit_kapag_ang pangalan_mo == "Masipag"
+  mag_print "Ikaw ay si Masipag!"
+maliban_sa_mga_ito
+  mag_print "Wala kang rekord dito!"
+wakas

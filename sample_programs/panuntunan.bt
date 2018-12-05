@@ -1,0 +1,23 @@
+ang gumawaNgID(estudyante = {})
+  pangalan = estudyante[:pangalan]
+  edad = estudyante[:edad]
+  tirahan = estudyante[:tirahan]
+  baitang = estudyante[:baitang]
+  seksiyon = estudyante[:seksiyon]
+  
+  mag_print <<-KATAPUSAN
+  	Pangalan: #{pangalan}
+	Edad:     #{edad}
+	Tirahan:  #{tirahan}
+	Baitang:  #{baitang}
+	Seksiyon: #{seksiyon}
+  KATAPUSAN
+wakas
+
+gumawaNgID({
+  pangalan: "Maliksi Batubalani",
+  edad: "13",
+  tirahan: "Ilocos",
+  baitang: "6",
+  seksiyon: "Masisipag"
+})

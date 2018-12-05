@@ -1,0 +1,13 @@
+bilang Pangalan
+  panguri :pangalan
+
+  ang initialize(pangalan)
+    @pangalan = pangalan
+  wakas
+
+  ang ipakitaAngPangalan
+    mag_print sariling.pangalan
+  wakas
+wakas
+
+Pangalan.gumawa('Joel').ipakitaAngPangalan

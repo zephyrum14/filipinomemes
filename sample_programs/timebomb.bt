@@ -1,0 +1,37 @@
+# Filipinomemes Programming Language (https://github.com/zephyrum14/filipinomemes)
+
+grupo TimeBomb
+  BILANG = 5
+  bilang Bomba
+    ang tik
+      mag_print 'tik'
+    wakas
+
+    ang tok
+      mag_print 'tok'
+    wakas
+
+    ang sabog
+      mag_print 'kaboom!'
+    wakas
+  wakas
+wakas
+
+pasabog = TimeBomb::Bomba.gumawa
+
+numero = 1
+habang numero <= TimeBomb::BILANG ganito
+	mag_print "#{numero}"
+
+  kapag (numero == TimeBomb::BILANG)
+    pasabog.sabog
+  ngunit_kapag_ang (numero % 2) != 0
+    pasabog.tik
+  ngunit_kapag_ang (numero % 2) == 0
+    pasabog.tok
+  wakas
+
+  matulog 1
+	numero += 1
+wakas
+

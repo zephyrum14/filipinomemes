@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'filipinomemes/compiler'
+require 'rubygems'
+
+if ARGV[0].nil?
+  puts <<-EOS
+Unknown file. The correct syntax is:
+
+filipinomemes file.bt
+  EOS
+else
+  ARGV.each do |file|
+    next unless file
+    tagatala = Filipinomemes::Compiler.new
+    kodigo = File.read file, encoding: 'utf-8'
+    ruby_kodigo = compiler.sa_ruby kodigo
+    raise 'The lowest version of Ruby needed is 2.4' if
+      Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.3')
+    eval ruby_kodigo
+  end
+end

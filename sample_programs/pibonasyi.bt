@@ -1,0 +1,59 @@
+ang pibonasyi(n, n1 = 1, n2 = 1)
+  kapag n <= 2
+    [0, n1, n2][n]
+  kung_hindi
+    sagot = wala
+    (n-2).ulit na_ganito
+      sagot = n1 + n2
+      n1 = n2
+      n2 = sagot
+    wakas
+    sagot
+  wakas
+wakas
+
+ang pibonasyingPagsuksok(n, n1 = 1, n2 = 1)
+  kapag n <= 2
+    [0, n1, n2][n]
+  kung_hindi
+    ([wala].umikot.kumuha(n-2).ipasok([n1, n2]) na_ganito |nakaraan, x|
+      nakaraan.magbagsak(1).itulak(nakaraan[0] + nakaraan[1])
+    wakas).huli
+  wakas
+wakas
+
+ang pibonasyingInuulit(n, n1 = 1, n2 = 1)
+  kapag n <= 2
+    binhi = [0, n1, n2]
+    binhi[n]
+  kung_hindi
+    pibonasyingInuulit(n-1, n1, n2) + pibonasyingInuulit(n-2, n1, n2)
+  wakas
+wakas
+
+ang pibonasyingBuntutangInuulit(n, n1 = 1, n2 = 1)
+  magbalik n1 kapag n <= 1
+  magbalik n2 kapag n == 2
+  magbalik pibonasyi(n - 1, n2, n1 + n2)
+wakas
+
+ang pibonasyingPaguulit(n, n1 = 1, n2 = 1)
+  (2..n).sa_bawat_isa {
+    n1, n2 = n2, n1 + n2
+  }
+  magbalik n1
+wakas
+
+ang pibonasyingPaguulitNaUmiikot(n, n1 = 1, n2 = 1)
+  para_sa i sa 2..n
+    n1, n2 = n2, n1 + n2
+  wakas
+  magbalik n1
+wakas
+
+mag_print "Gamit ang Panuntunang Pibonasyi sa 10 ay #{pibonasyi 10}"
+mag_print "Gamit ang Panuntunang Pibonasying May Pagsuksok sa 9 ay #{pibonasyingPagsuksok 9}"
+mag_print "Gamit ang Panuntunang Pibonasying Inuulit sa 8 ay #{pibonasyingInuulit 8}"
+mag_print "Gamit ang Panuntunang Pibonasying May Buntot na Inuulit sa 7 ay #{pibonasyingBuntutangInuulit 7}"
+mag_print "Gamit ang Panuntunang Pibonasying Paguulit sa 6 ay #{pibonasyingPaguulit 6}"
+mag_print "Gamit ang Panuntunang Pibonasying Paguulit na Umiikot sa 5 ay #{pibonasyingPaguulitNaUmiikot 5}"
