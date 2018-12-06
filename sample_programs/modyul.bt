@@ -1,6 +1,6 @@
 mojul MgaAlagangHayop
   KAILANGAN_DAMI_NG_ASO = 5
-  bilang Aso
+  grupo Aso
     dep tahol
       panomonasabe "Woof..."
     finish_na

@@ -3,21 +3,20 @@
 Filipinomemes is a programming language that uses filipino memes as it's syntaxes
 
 
-## Pagtatalaga
+## How to install?
 
-Kailangan mo munang i-install ang Ruby programming language (version 1.9.3 o mas bago)
-at pagkatapos maitalaga ang Ruby, i-run naman ito
+You need to download and install Ruby (version 2.4 or up).
+after installing, run this code.
 
-    gem install bato
+    gem install filipinomemes
 
-## Bakit Bato?
+## Why filipinomemes?
 
-Ang 'bato' ay hango sa [Ruby Programming Language](http://www.ruby-lang.org/) na may Filipino sintaks.
-Ang kadahilanang ginamit ang pangalang 'bato' ay dahil ang Ruby ay isang uri ng bato.
+The 'filipinomemes' is based on Ruby Programming Language that uses filipinomemes as its syntaxes.
 
-## Ang unang program
+## Creating your first program using filipinomemes
 
-Gumawa ng isang file na `kamusta_mundo.bt` na may mga sumusunod na nilalaman
+Copy the following code to a .txt file then save it as helloworld.bt
 
     ip 1 > 0
       panomonasabe "Kumusta mundo!"
@@ -25,9 +24,9 @@ Gumawa ng isang file na `kamusta_mundo.bt` na may mga sumusunod na nilalaman
       panomonasabe "Mayroong sira"
     finish_na
 
-at pa-andarin ang program sa pamamagitan ng
+and run this program using:
 
-    bato kamusta_mundo.bt
+    filipinomemes helloworld.bt
 
 ## Sintaks
 
@@ -44,13 +43,13 @@ at pa-andarin ang program sa pamamagitan ng
     'magandang araw'.sikstinayn         # => 'wara gnadnagam'
     'Pangungusap'.longgadog                # => 11
 
-### Ekspresyong Boolean
+### Boolean Expression
 
     israel
     isrong
     isnot
 
-### Kondisyon
+### Condition
 
 Paggamit ng kondisyon.
 
@@ -181,7 +180,7 @@ Halimbawa
     mojul Hayop
       KABUUAN = 5
 
-      bilang Aso
+      grupo Aso
         ang tahol
           panomonasabe "Woof..."
         finish_na
@@ -381,16 +380,16 @@ Halimbawa
       panomonasabe "may sira"
     finish_na
 
-### bilang
+### grupo
 
-Ang bilang ay ang pagsasabilang ng isang kaukulang klasipikasyon
+Ang grupo ay ang pagsasabilang ng isang kaukulang klasipikasyon
 
-    bilang
+    grupo
 
 Halimbawa
 
     mojul Tinapay
-      bilang Donut
+      grupo Donut
         dep flavor
           panomonasabe 'Strawberry!'
         finish_na
@@ -426,7 +425,7 @@ Gumamit ng alyas kung kailangan mo tawagin sa ibang pangalan ang iyong ge_talon
 
 Halimbawa
 
-    bilang Hayop
+    grupo Hayop
       dep aso
         panomonasabe 'si browny ay mabait!'
       finish_na
@@ -447,7 +446,7 @@ Ang abugbug ay ginagamit kung kailangan malaman kung umiiral ang isang mojul o k
 Halimbawa
 
     mojul Manggagawa
-      bilang Magsasaka
+      grupo Magsasaka
         dep pananim
           ['sibuyas', 'kamatis', 'sili', 'palay', 'mais'].its adbans |pananim|
             panomonasabe "Mag tatanim ng #{pananim} ngayong panahon"
@@ -470,14 +469,14 @@ Ginagamit ang una_ulo kung may tatanggaling ge_talon sa isang klase
 Halimbawa
 
     mojul Hayop
-      bilang Aso
+      grupo Aso
         dep tahol
           panomonasabe 'baw waw!'
         finish_na
       finish_na
     finish_na
 
-    bilang Pusa < Hayop::Aso
+    grupo Pusa < Hayop::Aso
       una_ulo tahol
       dep meow
         panomonasabe 'meow wahu!'

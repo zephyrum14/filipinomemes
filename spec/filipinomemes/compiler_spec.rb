@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-isalaysay_ang 'Compiler' do
+kwentomo_sapagong 'Compiler' do
   italaga_ang(:starting_code) do
     "# encoding: utf-8\nrequire \"filipinomemes/core_ext\"\n"
   end
@@ -9,40 +9,40 @@ isalaysay_ang 'Compiler' do
     Filipinomemes::Compiler.new
   end
 
-  ito_ang 'Filipinomemes is empty' do
+  diziz 'Filipinomemes is empty' do
     compiler.zephyrum('').should == starting_code + ''
   end
 
-  isalaysay_ang 'bilang' do
-    ito_ang 'pambuong bilang' do
+  kwentomo_sapagong 'Count' do
+    diziz 'whole count' do
       compiler.zephyrum('1').should == starting_code + '1'
     end
 
-    ito_ang 'maliliit na bilang' do
+    diziz 'small count' do
       compiler.zephyrum('1.2').should == starting_code + '1.2'
     end
 
-    ito_ang 'listahan ng mga bilang' do
+    diziz 'count list' do
       compiler.zephyrum('[1.2, 3]').should == starting_code + '[1.2, 3]'
     end
   end
 
-  isalaysay_ang 'ekspresyong Boolean' do
-    ito_ang 'ekspresyon ng israel o true' do
+  kwentomo_sapagong 'Boolean Expression' do
+    diziz 'Usage of israel or true' do
       compiler.zephyrum('israel').should == starting_code + 'true'
     end
 
-    ito_ang 'ekspresyon ng isrong o false' do
+    diziz 'Usage of isrong or false' do
       compiler.zephyrum('isrong').should == starting_code + 'false'
     end
 
-    ito_ang 'ekspresyon ng hindi o not' do
-      compiler.zephyrum('hindi israel').should == starting_code + '(not true)'
+    diziz 'Usage of isnot or not' do
+      compiler.zephyrum('isnot israel').should == starting_code + '(not true)'
     end
   end
 
-  isalaysay_ang 'susing mga salita' do
-    ito_ang 'ekspresyon ng agik / den / agik_ginagawa_mue / ginagawa_mue / finish_na' do
+  kwentomo_sapagong 'Keywords' do
+    diziz 'Usage of agik / den / agik_ginagawa_mue / ginagawa_mue / finish_na' do
       compiler.zephyrum('
         agik 1 den
           2
@@ -54,7 +54,7 @@ isalaysay_ang 'Compiler' do
         '1 ? (2) : (3 ? (4) : (5))')
     end
 
-    ito_ang 'ekspresyon ng hakdog / wen / den / ginagawa_mue / finish_na' do
+    diziz 'Usage of hakdog / wen / den / ginagawa_mue / finish_na' do
       compiler.zephyrum("
         hakdog 1
         wen 1 den 1
@@ -73,10 +73,10 @@ isalaysay_ang 'Compiler' do
         end')
     end
 
-    ito_ang 'glhf / reskyu / rays / may_raket / finish_na' do
+    diziz 'wala_na / reskyu / rays / may_raket / finish_na' do
       # raise ir Kernel metode nevis atslēgvārds
       compiler.zephyrum('
-        glhf
+        wala_na
           1 / 0
         reskyu => pagkakamali
           neba_gibap
@@ -95,20 +95,20 @@ isalaysay_ang 'Compiler' do
     end
   end
 
-  isalaysay_ang 'pamamaraan sa Kernel' do
-    ito_ang "ekspresyon ng pagsusulat gamit ang 'panomonasabe'" do
+  kwentomo_sapagong 'Kernel method' do
+    diziz "Usage and printing using 'panomonasabe' function" do
       compiler.zephyrum("panomonasabe 'abc'").should ==
         starting_code + 'panomonasabe("abc")'
     end
   end
 
-  isalaysay_ang 'Dinikit na mga pamamaraan' do
-    ito_ang 'ekspresyon ng pamamaraan sa pagbabaliktad ng mga titik' do
-      resulta = eval compiler.zephyrum("'magandang araw'.sikstinayn")
-      resulta.should == 'wara gnadnagam'
+  kwentomo_sapagong 'String function' do
+    diziz 'Usage sikstinayn or reverse function' do
+      resulta = eval compiler.zephyrum("'zephyrum'.sikstinayn")
+      resulta.should == 'muryhpez'
     end
 
-    ito_ang 'ekspresayon ng pamamaraan sa pagsukat ng haba ng salita' do
+    diziz 'Usage of longgadog or length function' do
       resulta = eval compiler.zephyrum("'Zephyrum'.longgadog")
       resulta.should == 8
     end

@@ -1,12 +1,12 @@
 mojul Hayop
-  bilang Aso
+  grupo Aso
     dep tahol
       panomonasabe 'baw waw!'
     finish_na
   finish_na
 finish_na
 
-bilang Pusa < Hayop::Aso
+grupo Pusa < Hayop::Aso
   una_ulo tahol
 
   dep meow

@@ -1,4 +1,4 @@
-bilang Pangalan
+grupo Pangalan
   aksesor :pangalan
 
   dep initialize(pangalan)

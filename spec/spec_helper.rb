@@ -45,9 +45,9 @@ RSpec.configure do |config|
 end
 
 class << RSpec::Core::ExampleGroup
-  alias isalaysay_ang describe
-  RSpec::Core::ExampleGroup.define_example_group_method :isalaysay_ang
-  RSpec::Core::ExampleGroup.define_example_method :ito_ang
+  alias kwentomo_sapagong describe
+  RSpec::Core::ExampleGroup.define_example_group_method :kwentomo_sapagong
+  RSpec::Core::ExampleGroup.define_example_method :diziz
 end
 
 RSpec::Core::MemoizedHelpers::ClassMethods.module_eval do

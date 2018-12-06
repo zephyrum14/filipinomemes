@@ -2,7 +2,7 @@
 
 mojul TimeBomb
   BILANG = 5
-  bilang Bomba
+  grupo Bomba
     dep tik
       panomonasabe 'tik'
     finish_na

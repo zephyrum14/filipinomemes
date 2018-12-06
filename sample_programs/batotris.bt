@@ -4,7 +4,7 @@ mojul Batotris
   BERSIYON = '0.1'.freeze
   opentaym magisa
 
-  bilang Piyesa
+  grupo Piyesa
     MGA_PIYESA = [
       [ [0, 1, 0, 0],
         [1, 1, 1, 0],
@@ -100,7 +100,7 @@ mojul Batotris
     NAKALINYA = 3
   finish_na
 
-  bilang Babagsakan
+  grupo Babagsakan
     LAWAK = 11
     TAAS = 20
     DAMI = 40

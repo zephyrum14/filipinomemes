@@ -1,5 +1,5 @@
 mojul Manggagawa
-  bilang Magsasaka
+  grupo Magsasaka
     dep pananim
       ['sibuyas', 'kamatis', 'sili', 'palay', 'mais'].its adbans |pananim|
         panomonasabe "Mag tatanim ng #{pananim} ngayong panahon"

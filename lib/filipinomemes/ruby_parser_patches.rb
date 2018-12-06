@@ -1,4 +1,4 @@
-class RubyLexer
+class Lexer
   def parse_number
     self.lex_state = :expr_end
 
@@ -51,7 +51,7 @@ module RubyParserStuff
       ['dep',                  %i[kDEF kDEF], :expr_fname],
       ['ge_talon',             %i[kDEF kDEF], :expr_fname],
       ['reskyu',               %i[kRESCUE kRESCUE_MOD], :expr_mid],
-      ['hindi',                %i[kNOT kNOT], :expr_beg],
+      ['isnot',                %i[kNOT kNOT], :expr_beg],
       ['den',                  %i[kTHEN kTHEN], :expr_beg],
       ['yild',                 %i[kYIELD kYIELD], :expr_arg],
       ['dewei',                %i[kYIELD kYIELD], :expr_arg],
@@ -88,7 +88,7 @@ module RubyParserStuff
       ['sapa',                 %i[kREDO kREDO], :expr_end],
       ['at',                   %i[kAND kAND], :expr_beg],
       ['__LINE__',             %i[k__LINE__ k__LINE__], :expr_end],
-      ['bilang',               %i[kCLASS kCLASS], :expr_class],
+      ['grupo',                %i[kCLASS kCLASS], :expr_class],
       ['klase',                %i[kCLASS kCLASS], :expr_class],
       ['__FILE__',             %i[k__FILE__ k__FILE__], :expr_end],
       ['END',                  %i[klEND klEND], :expr_end],
@@ -126,7 +126,7 @@ module RubyParserStuff
       WORDLIST19[k] = WORDLIST19[k].dup
       WORDLIST19[k].state = :expr_value
     end
-    %w[hindi].each do |k|
+    %w[isnot].each do |k|
       WORDLIST19[k] = WORDLIST19[k].dup
       WORDLIST19[k].state = :expr_arg
     end
