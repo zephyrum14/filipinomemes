@@ -1,0 +1,8 @@
+your_name = "Zephyrum"
+agik your_name == "Jan Paul"
+  panomonasabe "Hi Jan Paul!"
+agik_ginagawa_mue your_name == "Zephyrum"
+  panomonasabe "Hello Zephyrum!"
+ginagawa_mue
+  panomonasabe "Sorry I don't know your name. :("
+finish_na

@@ -1,8 +1,0 @@
-pangalan_mo = "Masipag"
-agik pangalan_mo == "Matipuno"
-  panomonasabe "Ikaw ay si Matipuno!"
-agik_ginagawa_mue pangalan_mo == "Masipag"
-  panomonasabe "Ikaw ay si Masipag!"
-ginagawa_mue
-  panomonasabe "Wala kang rekord dito!"
-finish_na

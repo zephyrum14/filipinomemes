@@ -1,9 +1,0 @@
-panulat_mo = "lapis"
-
-papel = hakdog panulat_mo
-  wen "lapis" den "bond paper"
-  wen "ballpen" den "dilaw na papel"
-  ginagawa_mue "intermediate paper"
-finish_na
-
-panomonasabe "Ang papel na gagamitin mo ay #{papel}"

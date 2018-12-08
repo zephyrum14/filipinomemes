@@ -1,4 +1,4 @@
-dep gumawaNgID
+dep createID
   panomonasabe "------------------------------------------"
 
   dewei
@@ -6,22 +6,22 @@ dep gumawaNgID
   panomonasabe "------------------------------------------"
 finish_na
 
-dep ID(impormasyon = {})
-  gumawaNgID adbans
+dep ID(information = {})
+  createID adbans
     panomonasabe <<-FINISH_NA
-  Pangalan: #{impormasyon[:pangalan]}
-  Edad:     #{impormasyon[:edad]}
-  Tirahan:  #{impormasyon[:tirahan]}
-  Baitang:  #{impormasyon[:baitang]}
-  Seksiyon: #{impormasyon[:seksiyon]}
+  Name:       #{information[:name]}
+  Age:        #{information[:age]}
+  Address:    #{information[:address]}
+  Course:     #{information[:course]}
+  Yr and Sec: #{information[:yrsec]}
     FINISH_NA
   finish_na
 finish_na
 
 ID({
-  pangalan: "Maliksi Batubalani",
-  edad: "13",
-  tirahan: "Ilocos",
-  baitang: "6",
-  seksiyon: "Masisipag"
+  name: "Jan Paul Carag",
+  age: "20",
+  address: "Brgy. Juan, Seoulsona",
+  course: "BSCS",
+  yrsec: "IV-A"
 })

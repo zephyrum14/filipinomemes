@@ -1,8 +1,0 @@
-nakamit = isrong
-
-ako_magisip nakamit == isrong
-  panomonasabe 'hindi pa nakakamit!'
-  auko_na
-finish_na
-
-panomonasabe 'nakamit na!'

@@ -1,9 +1,0 @@
-grupo Hayop
-  dep aso
-    panomonasabe 'si browny ay mabait!'
-  finish_na
-  alyas browny aso
-finish_na
-
-hayop = Hayop.bago
-hayop.browny

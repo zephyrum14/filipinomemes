@@ -74,7 +74,7 @@ kwentomo_sapagong 'Compiler' do
     end
 
     diziz 'wala_na / reskyu / rays / may_raket / finish_na' do
-      # raise ir Kernel metode nevis atslēgvārds
+      # The raise is the Kernel method rather than the keyword
       compiler.zephyrum('
         wala_na
           1 / 0

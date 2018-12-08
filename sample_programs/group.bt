@@ -1,0 +1,13 @@
+grupo Name
+  aksesor :name
+
+  dep initialize(name)
+    @name = name
+  finish_na
+
+  dep panomonasabeName
+    panomonasabe selp.name
+  finish_na
+finish_na
+
+Name.bago('Zephyrum').panomonasabeName

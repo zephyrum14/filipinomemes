@@ -1,0 +1,10 @@
+mojul Esports
+  grupo Games
+    dep favorite
+      panomonasabe 'Dota 2!'
+    finish_na
+  finish_na
+finish_na
+
+esports = Esports::Games.bago
+esports.favorite
