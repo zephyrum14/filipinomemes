@@ -1,3 +1,6 @@
+# Lexer
+# The Parsing method is explicitly UTF-8 so the Lexer is also explicitly UTF-8
+# Inorder to use the functions of yacc, we need to use BNF Grammar
 class Lexer
   def parse_number
     self.lex_state = :expr_end
@@ -22,6 +25,7 @@ class Lexer
       number = src.matched.sub(',', '.')
       rb_compile_error 'Invalid numeric format' if number =~ /__/
       self.yacc_value = number.to_f
+      #values of token which had a value associated with it.
       :tFLOAT
     elsif src.scan(/[+-]?[0-9_]+(?![e])/)
       int_with_base(10)
@@ -31,6 +35,10 @@ class Lexer
   end
 end
 
+
+# Parser
+# This will transform a piece of code (below are some samples) into an “abstract syntax tree".
+# It will build a structure which represents the semantics of the program.
 module RubyParserStuff
   class Keyword
     wordlist = [
@@ -99,10 +107,14 @@ module RubyParserStuff
       ['__ENCODING__',         %i[k__ENCODING__ k__ENCODING__], :expr_end]
     ].map { |args| KWtable.new(*args) }
 
+    #KWtable is Keyword Table
+
     # :startdoc:
+
 
     original_verbosity = $VERBOSE
     $VERBOSE = nil
+    #$VERBOSE will check for errors or warnings on both syntax and those that happen at runtime.
 
     WORDLIST18 = Hash[*wordlist.map { |o| [o.name, o] }.flatten]
     WORDLIST19 = Hash[*wordlist.map { |o| [o.name, o] }.flatten]
@@ -111,6 +123,8 @@ module RubyParserStuff
 
     WORDLIST18.delete '__ENCODING__'
 
+    #Word array
+    #this returns an array of strings
     %w[at
        kays hakdog
        elsip agik_ginagawa_mue

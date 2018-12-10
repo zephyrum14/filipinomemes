@@ -1,3 +1,5 @@
+#declarations
+#these are utility classes
 class String
   alias sikstinayn reverse
   alias longgadog length

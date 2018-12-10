@@ -2,12 +2,17 @@
 require 'filipinomemes/compiler'
 require 'rubygems'
 
+# This will return null if the file your trying to open is not found
+# or if you have entered an invalid syntax.
 if ARGV[0].nil?
   puts <<-EOS
 Unknown file. The correct syntax is:
-
 filipinomemes file.bt
   EOS
+
+# The reader(code) will read the contents of the file then the compiler will be executed.
+# Instantiating compiler objects from compiler class.
+# an error will prompt if you have ruby version lower than 2.4.
 else
   ARGV.each do |file|
     next unless file

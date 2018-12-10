@@ -1,14 +1,21 @@
 require 'spec_helper'
 
+#These are sample codes.
+#How they should be used and how the compiler should execute them.
+
 kwentomo_sapagong 'Compiler' do
-  italaga_ang(:starting_code) do
+  hayaan_mo_sila(:starting_code) do
     "# encoding: utf-8\nrequire \"filipinomemes/core_ext\"\n"
   end
 
-  italaga_ang(:compiler) do
+  #call compiler
+
+  hayaan_mo_sila(:compiler) do
     Filipinomemes::Compiler.new
   end
+  #instantiate Compiler
 
+#Sample codes
   diziz 'Filipinomemes is empty' do
     compiler.zephyrum('').should == starting_code + ''
   end
@@ -103,7 +110,7 @@ kwentomo_sapagong 'Compiler' do
   end
 
   kwentomo_sapagong 'String function' do
-    diziz 'Usage sikstinayn or reverse function' do
+    diziz 'Usage of sikstinayn or reverse function' do
       resulta = eval compiler.zephyrum("'zephyrum'.sikstinayn")
       resulta.should == 'muryhpez'
     end

@@ -1,3 +1,4 @@
+#call
 require 'filipinomemes/core_ext/kernel'
 require 'filipinomemes/core_ext/string'
 require 'filipinomemes/core_ext/array'
